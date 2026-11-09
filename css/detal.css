@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+   
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    height: 100px;
+}
+
+.input {
+    position: relative;
+}
+
+.input i {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    font-size: 20px;
+}
+
+.input input {
+    width: 600px;
+    height: 50px;
+    padding: 10px 10px 10px 50px;
+    border: none;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.login i {
+    font-size: 20px;
+}
+
+.login:hover {
+    color: #29ACFF;
+}
+
+.secimler {
+    display: flex;
+    align-items: center;
+    gap: 73px;
+    justify-content: center;
+}
+
+.buy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.watch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.securt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buy:hover,
+.watch:hover,
+.best:hover,
+.magazin:hover,
+.collec:hover,
+.pulse:hover,
+.faq:hover,
+.securt:hover {
+    color: #29ACFF;
+    cursor: pointer;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.sekil img{
+    width: 680px;
+    height: 680px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.detall{
+    padding: 20px;
+    margin-top: 30px;
+}
+.sekil{
+    position: relative;
+}
+.sekill img{
+    width: 105px;
+    height: 105px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.sekill{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.icon1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 30px;
+    left: 620px;
+}
+.icon1 i{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.icon1 i:hover{
+    color: #29ACFF;
+}
+.icon2{
+    display: flex;
+    gap: 570px;
+    position: absolute;
+    top: 330px;
+    left: 10px;
+}
+
+.icon2 i{
+    width: 44px;
+    height: 44px;
+    border-radius: 7px;
+    background-color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+
+.icon2 i:hover{
+    color: #29ACFF;
+}
+
+.sekil:hover .icon2 i{
+    opacity: 1;
+}
+.detall{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.soz{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    white-space: nowrap;
+    color: #5a5a5a;
+    transition: all 0.2s ease;
+}
+.soz p:hover{
+    color: #29ACFF;
+    cursor: pointer;
+}
+.soz p,
+.soz i{
+    flex-shrink: 0;
+}
+.soz2{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.sozler{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.sozz{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sozz .p1{
+    color: #336ECF;
+}
+.p{
+    width: 460px;
+}
+.buy button{
+    width: 476px;
+    height: 50px;
+    padding: 10px 0px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1A253C;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.buy button:hover{
+    background-color: #374E80;
+}
+.no{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.yes{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.noo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.sertler{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    border: 1px solid;
+    width: 476px;
+    padding: 20px;
+    background-color: #F2F2F2;
+    border-color: #c4c4c4;
+    border-radius: 10px;
+}
+.sert{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

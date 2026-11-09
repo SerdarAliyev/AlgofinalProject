@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 50px;
+}
+
+.input input {
+    width: 476px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 2px solid;
+    border-color: #E5E5E5;
+}
+
+.loginn {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 1px solid;
+    width: 578px;
+    height: 664px;
+    border-radius: 10px;
+    padding: 50px;
+    border-color: #bfbfbf;
+    background-color: #fff;
+}
+
+.input2 input {
+    width: 476px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 2px solid;
+    border-color: #E5E5E5;
+}
+
+.cehck {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qebul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pasword {
+    cursor: pointer;
+    border-bottom: 2px solid;
+}
+
+.input2 {
+    position: relative;
+}
+
+.input2 {
+    position: relative;
+}
+
+.goz {
+    position: absolute;
+    right: 15px;
+    top: 35px;
+    cursor: pointer;
+}
+
+.btn {
+    display: block;
+}
+
+.btn2 {
+    display: none;
+}
+
+.btn,
+.btn2 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+
+.btnn button {
+    width: 476px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    background-color: #1A253C;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btnn button:hover {
+    background-color: #33466e;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.xet {
+    border-bottom: 1px solid;
+    width: 210px;
+    border-color: rgb(187, 187, 187);
+}
+
+.xet2 {
+    border-bottom: 1px solid;
+    width: 210px;
+    border-color: rgb(187, 187, 187);
+}
+
+.butonlar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buton1 {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid;
+    width: 476px;
+    height: 44px;
+    padding: 10px;
+    background: none;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.buton1:hover {
+    background-color: #E5E5E5;
+}
+
+.buton2 {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid;
+    width: 476px;
+    height: 44px;
+    padding: 10px;
+    background: none;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.buton2:hover {
+    background-color: #E5E5E5;
+}
+
+.text a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    transition: all 0.2s ease;
+}
+.text a:hover{
+    color: #006CFF;
+}
+.sozler{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 110px;
+    padding-bottom: 20px;
+    gap: 40px;
+}
+.sozler a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    transition: all 0.2s ease;
+}
+.sozler a:hover{
+    color: #006CFF;
+}
+.cehck input{
+    font-size: 200px;
+}
+@media (max-width: 650px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .login {
+        width: 100%;
+        margin-top: 25px;
+        gap: 25px;
+    }
+
+    .loginn {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .input,
+    .input2 {
+        width: 100%;
+    }
+
+    .input input,
+    .input2 input {
+        width: 100%;
+    }
+
+    .btnn,
+    .butonlar {
+        width: 100%;
+    }
+
+    .btnn button,
+    .buton1,
+    .buton2 {
+        width: 100%;
+    }
+
+    .or {
+        gap: 10px;
+    }
+
+    .xet,
+    .xet2 {
+        width: 100%;
+    }
+
+    .sozler {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 35px;
+        text-align: center;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 380px) {
+    .loginn {
+        padding: 25px 15px;
+    }
+
+    .qebul {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .sozler {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .buton1,
+    .buton2 {
+        gap: 10px;
+        font-size: 12px;
+    }
+}
