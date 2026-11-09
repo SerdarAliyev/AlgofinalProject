@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 120px;
+    gap: 136px;
     height: 100px;
 }
 
@@ -65,7 +65,7 @@
 .secimler {
     display: flex;
     align-items: center;
-    gap: 73px;
+    gap: 77px;
     justify-content: center;
 }
 
@@ -102,6 +102,8 @@
 .menu{
     display: flex;
     align-items: center;
+    position: relative;
+    left: -10px;
     padding: 10px;
     cursor: pointer;
     margin-top: 50px;

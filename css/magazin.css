@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo img {
+    cursor: pointer;
+}
+
+.xet {
+    width: 1px;
+    height: 40px;
+    background-color: #CCCCCC;
+}
+
+.logo h1 {
+    color: #191919;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logo h1:hover {
+    color: #0062FF;
+}
+
+.market {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.market button {
+    padding: 10px;
+    width: 185px;
+    height: 44px;
+    border-radius: 7px;
+    cursor: pointer;
+    background: none;
+    transition: all 0.3s ease;
+    border: 1px solid;
+    color: #000000;
+}
+
+.market button:hover {
+    background-color: #E8E8E8;
+}
+
+.market i {
+    transition: all 0.2s ease;
+}
+
+.market i:hover {
+    cursor: pointer;
+    color: #0062FF;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.brands,
+.watch,
+.appeal,
+.events,
+.auto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.brands:hover,
+.watch:hover,
+.appeal:hover,
+.events:hover,
+.auto:hover {
+    color: #0062FF;
+}
+
+.main {
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.main img {
+    width: 1190px;
+    height: 595px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.main:hover img {
+    transform: scale(1.02);
+    border-radius: 40px;
+}
+
+.adam img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.adam {
+    display: flex;
+    gap: 10px;
+}
+
+.soz2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profil {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sozler {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.p1 {
+    font-size: 23px;
+}
+
+.profil1 img {
+    width: 578px;
+    height: 289px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.hesab1 img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.hesab1 {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    transform: translateX(300px);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profil1 h3 {
+    width: 600px;
+}
+
+.profiller {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.profil1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profiller {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.profiller h1 {
+    width: 100%;
+}
+
+.profil1 {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profil1>img {
+    width: 100%;
+    height: 289px;
+    object-fit: cover;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn button {
+    padding: 10px;
+    background: none;
+    border-radius: 7px;
+    border: 1px solid;
+    width: 201px;
+    height: 44px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn button:hover {
+    background-color: #E8E8E8;
+}
+
+.userler img {
+    width: 380px;
+    height: 189px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.usr img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.usr {
+    display: flex;
+    gap: 10px;
+}
+
+.user1 h3 {
+    width: 400px;
+}
+
+.user1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.userler {
+    display: flex;
+    gap: 10px;
+}
+
+.fetured {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 70px;
+}
+
+.sekiller {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.secimlerr img {
+    width: 230px;
+    height: 230px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 34px;
+    background-color: #EFECEA;
+    border-radius: 15px;
+}
+
+
+.secimlerr img:hover {
+    transform: scale(1.08);
+}
+
+.popular {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.secimlerr {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 18px;
+}
+body {
+    margin: 0;
+}
+
+.footer {
+    width: 100%;
+    align-self: stretch;
+    margin-top: 150px;
+    background-color: #1A253C;
+    padding: 100px max(30px, calc((100% - 1200px) / 2));
+    color: #fff;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.sec1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social i {
+    cursor: pointer;
+}
+
+.americ img {
+    width: 24px;
+    height: 24px;
+}
+
+.americ {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid;
+    width: 410px;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.system {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.system2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dark {
+    border: 1px solid;
+    width: 410px;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.sec1 h2 {
+    width: 300px;
+}
+
+.xett {
+    position: relative;
+    width: 99vw;
+    margin-left: calc(50% - 50vw);
+    margin-top: 60px;
+    border-bottom: 1px solid #36415B;
+}
+.uleler{
+    display: flex;
+    align-items: center;
+    gap: 300px;
+    margin-top: 50px;
+}
+.uleler ul{
+    list-style: none;
+}
+.uleler a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 40px;
+}
