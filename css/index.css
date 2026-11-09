@@ -85,7 +85,10 @@
     align-items: center;
     gap: 10px;
 }
-
+.magazin a{
+    text-decoration: none;
+    color: black;
+}
 
 .buy:hover,
 .watch:hover,
