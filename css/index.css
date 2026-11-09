@@ -17,7 +17,6 @@
     width: 100%;
     max-width: 1200px;
 }
-
 .row2 {
     width: 100%;
     max-width: 1200px;
@@ -114,7 +113,13 @@
     object-fit: cover;
     display: block;
 }
-
+.best a{
+    color: black;
+    text-decoration: none;
+}
+.best a:hover{
+    color: #29ACFF !important;
+}
 .melumat {
     position: absolute;
     top: 50%;
@@ -688,131 +693,303 @@
     width: 350px;
     padding: 10px;
 }
-.footer{
-    margin-top: 200px;
+    .footer{
+        margin-top: 200px;
+    }
+    .footer2{
+        display: flex;
+        align-items: center;
+        gap: 300px;
+        margin-top: 50px;
+    }
+    .footer2 li{
+        list-style: none;
+    }
+    .footer2 a{
+        text-decoration: none;
+        color: black;
+    }
+    .foto1 img{
+        width: 90px;
+        height: 90px;
+        cursor: pointer;
+    }
+    .foto{
+        display: flex;
+    }
+    .foto2{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+    .footer3{
+        display: flex;
+        gap: 310px;
+        margin-top: 70px;
+    }
+    .ull4 li{
+        list-style: none;
+    }
+    .ull4 a{
+        text-decoration: none;
+        color: black;
+    }
+    .bayraqlar img{
+        width: 24px;
+        height: 18px;
+    }
+    .bayraq2{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .bayraq{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .bayraq1{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .bayraqlar{
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        margin-top: 80px;
+        border-bottom: 1px solid #36415B;
+        padding-bottom: 100px;
+    }
+    .langu{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dil{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dil2{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dil3   {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dil4{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dil5{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer{
+        width: 1521px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: #1A253C;
+        color: #fff;
+        padding: 30px;
+    }
+    .footer a{
+        color: #fff;
+    }
+    .liler ul{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+    .liler a{
+        text-decoration: none;
+    }
+    .secimlerim{
+        display: flex;
+        align-content: center;
+        gap: 350px;
+        margin-top: 20px;
+    }
+    .iconlar{
+        cursor: pointer;
+    }
+.bolmee {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 99.02vw;
+    min-height: 600px;
+    display: none;
+    background-color: white;
+    z-index: 9999;
+    padding: 30px max(calc((100vw - 1340px) / 2), 20px);
 }
-.footer2{
+
+.bolmee.active {
     display: flex;
-    align-items: center;
-    gap: 300px;
-    margin-top: 50px;
+    justify-content: space-between;
+    gap: 30px;
 }
-.footer2 li{
+
+.bolmee1,
+.bolmee2,
+.bolmee3,
+.bolmee4 {
+    flex: 1;
+    min-width: 0;
+}
+
+.bolmee1,
+.bolmee2,
+.bolmee3,
+.bolmee4 {
+    flex: 1;
+    min-width: 0;
+}
+.bolmee h4,
+.bolmee h4 {
+    color: black !important;
+}
+.bolmee ul {
     list-style: none;
+    line-height: 36px;
+    width: 300px;
 }
-.footer2 a{
+
+.bolmee ul h4 {
+    margin-bottom: 10px;
+}
+
+.bolmee a {
     text-decoration: none;
+    color: #555;
+}
+
+.bolmee a:hover {
+    color: #29ACFF;
+}
+
+.bolmee .foto {
+    margin-top: 10px;
+    display: block;
+}
+
+.sekil_saat {
+    position: relative;
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.sekil_saat img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sozler_saat {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sozler_saat h4 {
+    font-size: 30px;
+    color: white;
+}
+
+.sozler_saat button {
+    width: 180px;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .bolmee {
+        flex-wrap: wrap;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .bolmee1,
+    .bolmee2,
+    .bolmee3,
+    .bolmee4 {
+        flex: 1 1 220px;
+    }
+}
+.sozler_saat h4{
+    color: #fff !important;
+}
+.watch {
+    position: relative;
+}
+
+.metnler {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 300px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    background-color: white;
+    padding: 40px 20px;
+    z-index: 9999;
+    box-sizing: border-box;
+}
+
+.metnler.active {
+    display: flex;
+}
+
+.metn1,
+.metn2,
+.metn3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.metn1,
+.metn2,
+.metn3 {
+   color: black !important;
+}
+.metnler a {
     color: black;
+    transition: all 0.3s ease;
 }
-.foto1 img{
-    width: 90px;
-    height: 90px;
+
+.metnler a:hover {
+    color: #29ACFF;
+}
+
+.metn3 {
+    width: 408px;
+    min-width: 250px;
+    padding: 17px;
+    background-color: #E6E6E6;
+    border-radius: 10px;
     cursor: pointer;
 }
-.foto{
-    display: flex;
-}
-.foto2{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-.footer3{
-    display: flex;
-    gap: 310px;
-    margin-top: 70px;
-}
-.ull4 li{
-    list-style: none;
-}
-.ull4 a{
-    text-decoration: none;
-    color: black;
-}
-.bayraqlar img{
-    width: 24px;
-    height: 18px;
-}
-.bayraq2{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.bayraq{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.bayraq1{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.bayraqlar{
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    margin-top: 80px;
-    border-bottom: 1px solid #36415B;
-    padding-bottom: 100px;
-}
-.langu{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.dil{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.dil2{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.dil3   {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.dil4{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.dil5{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.footer{
-    width: 1521px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    background-color: #1A253C;
-    color: #fff;
-    padding: 30px;
-}
-.footer a{
-    color: #fff;
-}
-.liler ul{
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-.liler a{
-    text-decoration: none;
-}
-.secimlerim{
-    display: flex;
-    align-content: center;
-    gap: 350px;
-    margin-top: 20px;
-}
-.iconlar{
-    cursor: pointer;
+.metn3:hover{
+    color: #29ACFF !important;
 }

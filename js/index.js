@@ -182,3 +182,47 @@ adam.forEach((adamm)=>{
         </div>
     `
 })
+let buy = document.querySelector(".buy");
+let bolmee = document.querySelector(".bolmee");
+let navbar = document.querySelector(".navbar");
+
+let watch = document.querySelector(".watch");
+let metnler = document.querySelector(".metnler");
+
+buy.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    metnler.classList.remove("active");
+
+    bolmee.style.top = navbar.getBoundingClientRect().bottom + "px";
+    bolmee.classList.toggle("active");
+});
+
+watch.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    bolmee.classList.remove("active");
+
+    metnler.style.top = navbar.getBoundingClientRect().bottom + "px";
+    metnler.classList.toggle("active");
+});
+
+bolmee.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+
+metnler.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+
+document.addEventListener("click", function () {
+    bolmee.classList.remove("active");
+    metnler.classList.remove("active");
+});
+
+window.addEventListener("resize", function () {
+    let top = navbar.getBoundingClientRect().bottom + "px";
+
+    bolmee.style.top = top;
+    metnler.style.top = top;
+});
