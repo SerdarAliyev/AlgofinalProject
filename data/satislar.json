@@ -1,0 +1,26 @@
+[
+    {
+        "class": "satis1",
+        "img": "https://s.c24.media/images/default/illustrations/buyer-rating.svg",
+        "title": "4.7 out of 5 stars",
+        "text": "from 206,000 reviews worldwide"
+    },
+    {
+        "class": "satis2",
+        "img": "https://s.c24.media/images/default/illustrations/love-my-watch.svg",
+        "title": "9 Million",
+        "text": "watch enthusiasts use Chrono24 each month"
+    },
+    {
+        "class": "satis3",
+        "img": "https://s.c24.media/images/default/illustrations/handshake.svg",
+        "title": "Over 340,000",
+        "text": "customers choose Buyer Protection annually"
+    },
+    {
+        "class": "satis4",
+        "img": "https://s.c24.media/images/default/illustrations/dealer.svg",
+        "title": "More Than 25,000",
+        "text": "trustworthy sellers"
+    }
+]

@@ -1,12 +1,11 @@
 let local_date = localStorage.getItem("card")
 let data = JSON.parse(local_date)
 let sekiller = document.querySelectorAll(".sekill img")
-sekiller[0].src = data.product_img1
-sekiller[1].src = data.product_img2
-sekiller[2].src = data.product_img3
-sekiller[3].src = data.product_img4
-sekiller[4].src = data.product_img5
-sekiller[5].src = data.product_img6
+
+sekiller.forEach((sekil, index) => {
+    sekil.src = data[`product_img${index + 1}`];
+});
+
 document.querySelector(".sekil > img").src = data.product_img
 document.querySelector(".model").textContent = data.model || ""
 document.querySelector(".seria").textContent = data.seria || ""

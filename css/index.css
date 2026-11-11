@@ -1,4 +1,3 @@
-
 /* =========================
    ÜMUMİ
 ========================= */
@@ -17,6 +16,7 @@ body {
 }
 
 img {
+    display: block;
     max-width: 100%;
 }
 
@@ -24,10 +24,10 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
+    min-width: 0;
 }
 
 .row,
@@ -35,6 +35,7 @@ img {
 .row3 {
     width: 100%;
     max-width: 1200px;
+    min-width: 0;
 }
 
 /* =========================
@@ -46,11 +47,19 @@ img {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    height: 100px;
+    width: 100%;
+    min-height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    min-width: 0;
 }
 
 .header_search {
     position: relative;
+    min-width: 0;
 }
 
 .header_search i {
@@ -62,11 +71,13 @@ img {
 
 .header_search input {
     width: 600px;
+    max-width: 100%;
     height: 50px;
     padding: 10px 10px 10px 50px;
     border: none;
     background-color: #F2F2F2;
     border-radius: 10px;
+    outline: none;
 }
 
 .login {
@@ -75,6 +86,7 @@ img {
     gap: 10px;
     cursor: pointer;
     transition: all 0.2s ease;
+    white-space: nowrap;
 }
 
 .login a {
@@ -100,7 +112,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    flex-wrap: wrap;
+    gap: 35px;
+    width: 100%;
 }
 
 .navmenu {
@@ -133,49 +147,52 @@ img {
 }
 
 /* =========================
-   HERO ŞƏKİL
+   HERO / BANNER
 ========================= */
 
-.sekil {
+.banner {
     position: relative;
     width: 100vw;
     max-width: none;
-    height: 500px;
-    margin-top: 10px;
+    height: 600px;
     margin-left: calc(50% - 50vw);
+    margin-top: 20px;
     overflow: hidden;
 }
 
-.sekil img {
+.banner img {
     display: block;
     width: 100%;
     height: 100%;
+    max-width: none;
     object-fit: cover;
 }
 
-.melumat {
+.banner_info {
     position: absolute;
     top: 50%;
-    left: clamp(20px, 7vw, 110px);
+    left: max(20px, calc((100vw - 1200px) / 2));
     transform: translateY(-50%);
-    width: min(500px, calc(100% - 40px));
+    width: 500px;
+    max-width: calc(100% - 40px);
     color: white;
     z-index: 2;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
-.melumat h4 {
-    margin-bottom: 20px;
+.banner_info h4 {
     font-size: 20px;
+    margin-bottom: 20px;
 }
 
-.melumat h1 {
-    font-size: 50px;
+.banner_info h1 {
+    max-width: 100%;
+    font-size: clamp(26px, 4vw, 50px);
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
-.melumat button {
+.banner_info button {
     padding: 12px 35px;
     border: none;
     background: white;
@@ -184,54 +201,150 @@ img {
     border-radius: 10px;
 }
 
+/* Köhnə hero class adları istifadə olunarsa */
+
+.sekil {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sekil img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.melumat {
+    position: absolute;
+    top: 50%;
+    left: max(20px, calc((100% - 1200px) / 2));
+    transform: translateY(-50%);
+    width: min(500px, calc(100% - 40px));
+    max-width: 500px;
+    color: white;
+    z-index: 2;
+    overflow-wrap: anywhere;
+}
+
+.melumat h1 {
+    max-width: 100%;
+    font-size: clamp(22px, 4vw, 50px);
+    line-height: 1.2;
+}
+
 /* =========================
    POPULAR MARKALAR
 ========================= */
 
+/* POPULAR BRANDS */
+
+/* POPULAR BRANDS */
+
 .secin {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto 0;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin-top: 80px;
+    gap: 25px;
+}
+
+.markalar {
+    width: 100%;
 }
 
 .marka {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
 }
 
-.marka p,
 .marka a {
-    display: block;
-    border-radius: 10px;
-    text-align: center;
-    padding: 17px;
-    background-color: #EFECEA;
-    cursor: pointer;
+    flex: 0 0 230px;
+    width: 230px;
+    min-width: 230px;
+    max-width: 230px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EFECEA;
+    border-radius: 8px;
+    color: #222;
     text-decoration: none;
-    color: black;
 }
-
-.marka p:hover,
-.marka a:hover {
+.marka a:hover{
     color: #29ACFF;
 }
-
 .marka button {
-    padding: 10px;
-    width: 160px;
+    flex: 0 0 auto;
+    display: block;
+    width: 170px;
+    min-width: 170px;
+    height: 44px;
+    margin: 10px auto 0;
     background: none;
-    border-radius: 5px;
     border: 1px solid;
+    border-radius: 7px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    grid-column: 1 / -1;
-    justify-self: center;
+}
+.marka button:hover{
+    background-color: #E6E6E6;
+}
+@media (max-width: 1200px) {
+    .marka {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 }
 
-.marka button:hover {
-    background-color: rgb(217, 217, 217);
+@media (max-width: 700px) {
+    .secin {
+        margin-top: 45px;
+    }
+
+    .marka {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+/* PLANŞET */
+
+@media (max-width: 1200px) {
+    .secin {
+        width: 100%;
+    }
+
+    .marka {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* TELEFON */
+
+@media (max-width: 700px) {
+    .secin {
+        margin-top: 45px;
+        gap: 20px;
+    }
+
+    .popular h1 {
+        font-size: 23px;
+    }
+
+    .marka {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .marka a {
+        min-height: 55px;
+        padding: 10px 6px;
+        font-size: 14px;
+    }
 }
 
 /* =========================
@@ -240,14 +353,18 @@ img {
 
 .musteri {
     margin-top: 100px;
+    width: 100%;
 }
 
 .satis {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     text-align: center;
     margin-top: 20px;
+    width: 100%;
 }
 
 .satis1,
@@ -255,11 +372,17 @@ img {
 .satis3,
 .satis4 {
     border: 1px solid #E5E5E5;
-    width: 290px;
-    height: 200px;
+    width: calc((100% - 60px) / 4);
+    min-width: 0;
+    min-height: 200px;
     padding: 15px;
     border-radius: 10px;
     line-height: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .soz1,
@@ -271,12 +394,14 @@ img {
     display: flex;
     align-items: center;
     gap: 10px;
+    min-width: 0;
 }
 
 .sozler {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    min-width: 0;
 }
 
 /* =========================
@@ -287,6 +412,8 @@ img {
     display: flex;
     align-items: center;
     position: relative;
+    width: 100%;
+    min-width: 0;
 }
 
 .sol_teref {
@@ -295,23 +422,23 @@ img {
     gap: 20px;
     margin-top: 100px;
     border: 1px solid;
-    width: 595px;
+    width: 50%;
     min-height: 450px;
     padding: 50px 34px 50px 50px;
     background-color: #1A253C;
     color: #fff;
     border-radius: 5px;
+    min-width: 0;
 }
 
 .btn button {
     width: 365px;
     max-width: 100%;
-    height: 44px;
+    min-height: 44px;
     padding: 10px;
     background: none;
-    border-color: #fff;
+    border: 1px solid #fff;
     color: #fff;
-    border: 1px solid;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -323,11 +450,13 @@ img {
 
 .sag_teref {
     position: absolute;
-    left: 544px;
+    left: 45%;
+    width: 58%;
+    min-width: 0;
 }
 
 .sag_teref img {
-    width: 690px;
+    width: 100%;
     height: 549px;
     padding: 50px 34px 50px 50px;
     margin-top: 103px;
@@ -341,29 +470,39 @@ img {
 
 .watchlar {
     margin-top: 100px;
+    width: 100%;
+    min-width: 0;
 }
 
 .watclar {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    width: 1280px;
-}
-
-.watchcard {
-    width: 285px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.watchcard img {
+    gap: 20px;
     width: 100%;
-    height: 210px;
+    max-width: 1200px;
+    min-width: 0;
+}
+
+.watclar .watch {
+    width: calc((100% - 60px) / 4);
+    min-width: 0;
+}
+
+.watclar .watch img {
+    width: 100%;
+    height: 180px;
     object-fit: cover;
-    cursor: pointer;
-    border-radius: 5px;
+    display: block;
+}
+
+.watclar .watch p {
+    margin-top: 10px;
+    color: black !important;
+    overflow-wrap: anywhere;
+}
+
+.watclar .watch p:hover {
+    color: black !important;
 }
 
 .disp {
@@ -397,22 +536,29 @@ img {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
+    min-width: 0;
 }
 
 .rolex {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
+    width: 100%;
+    min-width: 0;
 }
 
 .popularcard {
     background-color: #EFECEA;
     border-radius: 10px;
     overflow: hidden;
+    width: calc((100% - 60px) / 4);
+    min-width: 0;
 }
 
 .popularcard img {
-    width: 272px;
+    width: 100%;
+    height: auto;
     transition: all 0.3s ease;
 }
 
@@ -426,6 +572,8 @@ img {
     position: relative;
     left: 20px;
     top: -20px;
+    max-width: calc(100% - 30px);
+    overflow-wrap: anywhere;
 }
 
 /* =========================
@@ -434,9 +582,13 @@ img {
 
 .esas {
     display: flex;
-    align-items: center;
-    gap: 120px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
     margin-top: 30px;
+    width: 100%;
+    min-width: 0;
 }
 
 .esas ul {
@@ -468,15 +620,18 @@ img {
     gap: 20px;
     background-color: #EFECEA;
     width: 100vw;
+    max-width: none;
     margin-left: calc(50% - 50vw);
     padding: 80px 20px;
     align-items: center;
+    min-width: 0;
 }
 
 .magazinn {
     position: relative;
-    width: 1200px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 0;
 }
 
 .magazinn h1 {
@@ -487,8 +642,9 @@ img {
 .esass {
     display: flex;
     gap: 50px;
-    width: 1200px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 0;
 }
 
 .profil,
@@ -512,6 +668,7 @@ img {
 .profil h3,
 .profil2 h3 {
     width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .hesab,
@@ -519,6 +676,7 @@ img {
     display: flex;
     align-items: center;
     gap: 10px;
+    min-width: 0;
 }
 
 .hesab img,
@@ -535,6 +693,7 @@ img {
 .btnn button {
     padding: 10px;
     width: 200px;
+    max-width: 100%;
     background: none;
     border: 1px solid;
     cursor: pointer;
@@ -551,13 +710,17 @@ img {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 100%;
+    min-width: 0;
 }
 
 .adamlarr {
     display: flex;
     flex-wrap: wrap;
-    width: 1280px;
+    width: 100%;
+    max-width: 1200px;
     gap: 20px;
+    min-width: 0;
 }
 
 .adamlarr img {
@@ -565,12 +728,14 @@ img {
 }
 
 .adamcard {
-    width: 300px;
+    width: calc((100% - 60px) / 4);
+    min-width: 0;
 }
 
 .adamcard img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -585,6 +750,7 @@ img {
 .inst button {
     padding: 12px;
     width: 200px;
+    max-width: 100%;
     background: none;
     border: 1px solid;
     cursor: pointer;
@@ -603,7 +769,10 @@ img {
 .cardlar {
     margin-top: 100px;
     display: flex;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    min-width: 0;
 }
 
 .card1,
@@ -614,9 +783,11 @@ img {
     flex-direction: column;
     gap: 30px;
     border: 1px solid #E5E5E5;
-    width: 290px;
+    width: calc((100% - 60px) / 4);
+    min-width: 0;
     min-height: 440px;
     padding: 25px;
+    overflow-wrap: anywhere;
 }
 
 .plar p,
@@ -628,6 +799,7 @@ img {
 .plar3 p,
 .plar4 p {
     width: 100%;
+    overflow-wrap: anywhere;
 }
 
 /* =========================
@@ -637,6 +809,7 @@ img {
 .footer {
     margin-top: 200px;
     width: 100vw;
+    max-width: none;
     margin-left: calc(50% - 50vw);
     align-items: center;
     display: flex;
@@ -644,6 +817,7 @@ img {
     background-color: #1A253C;
     color: #fff;
     padding: 50px 20px;
+    min-width: 0;
 }
 
 .footer a {
@@ -652,15 +826,17 @@ img {
 
 .footer1 {
     display: flex;
-    gap: 60px;
-    width: 1200px;
-    max-width: 100%;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 0;
 }
 
 .secim {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    min-width: 0;
 }
 
 .secim button {
@@ -678,6 +854,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    min-width: 0;
 }
 
 .secimlerr {
@@ -694,6 +871,7 @@ img {
 .bayraqlar img {
     width: 24px;
     height: 18px;
+    flex-shrink: 0;
 }
 
 .secim3 p {
@@ -701,15 +879,17 @@ img {
     width: 350px;
     max-width: 100%;
     padding: 10px;
+    overflow-wrap: anywhere;
 }
 
 .footer2,
 .footer3 {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1200px;
     gap: 40px;
+    min-width: 0;
 }
 
 .footer2 {
@@ -736,6 +916,7 @@ img {
 
 .foto {
     display: flex;
+    min-width: 0;
 }
 
 .foto2 {
@@ -743,6 +924,7 @@ img {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    min-width: 0;
 }
 
 .footer3 {
@@ -753,12 +935,13 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 1200px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1200px;
     gap: 30px;
     margin-top: 80px;
     border-bottom: 1px solid #36415B;
     padding-bottom: 100px;
+    min-width: 0;
 }
 
 .bayraq,
@@ -767,6 +950,7 @@ img {
     display: flex;
     align-items: center;
     gap: 5px;
+    min-width: 0;
 }
 
 .langu,
@@ -778,20 +962,23 @@ img {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    min-width: 0;
 }
 
 .secimlerim {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1200px;
     margin-top: 20px;
     gap: 30px;
+    min-width: 0;
 }
 
 .liler ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     gap: 20px;
 }
@@ -812,12 +999,13 @@ img {
     position: fixed;
     top: 150px;
     left: 0;
-    width: 100vw;
+    width: 100%;
     min-height: 600px;
     display: none;
     background-color: white;
     z-index: 99999;
     padding: 30px max(calc((100vw - 1200px) / 2), 30px);
+    overflow-y: auto;
 }
 
 .bolmee.active {
@@ -830,7 +1018,7 @@ img {
 .bolmee2,
 .bolmee3 {
     flex: 0 0 180px;
-    min-width: 180px;
+    min-width: 0;
 }
 
 .bolmee4 {
@@ -897,6 +1085,7 @@ img {
 
 .sozler_saat button {
     width: 180px;
+    max-width: 100%;
     padding: 12px;
     border: none;
     border-radius: 7px;
@@ -915,12 +1104,13 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     min-height: 300px;
     display: none;
     align-items: center;
     justify-content: center;
-    gap: 70px;
+    flex-wrap: wrap;
+    gap: 50px;
     background-color: white;
     padding: 40px 20px;
     z-index: 9999;
@@ -937,6 +1127,7 @@ img {
     flex-direction: column;
     gap: 10px;
     color: black !important;
+    min-width: 0;
 }
 
 .metnler a {
@@ -950,7 +1141,8 @@ img {
 
 .metn3 {
     width: 408px;
-    min-width: 250px;
+    max-width: 100%;
+    min-width: 0;
     padding: 17px;
     background-color: #E6E6E6;
     border-radius: 10px;
@@ -1028,21 +1220,6 @@ img {
 }
 
 /* =========================
-   DESKTOP
-========================= */
-
-@media (min-width: 1201px) {
-    .menu,
-    .menuu {
-        display: none !important;
-    }
-
-    .header {
-        display: flex;
-    }
-}
-
-/* =========================
    PLANŞET
 ========================= */
 
@@ -1061,6 +1238,8 @@ img {
         max-width: 100%;
     }
 
+    /* HEADER */
+
     .menu {
         display: flex;
         align-items: center;
@@ -1069,22 +1248,60 @@ img {
     }
 
     .header {
+        display: grid;
+        grid-template-columns: 40px minmax(0, 1fr) auto;
+        align-items: center;
         width: 100%;
-        height: auto;
-        min-height: 100px;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 20px 0;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .menu {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .logo {
+        grid-column: 2;
+        grid-row: 1;
+        justify-content: center;
+    }
+
+    .login {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .header_search {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
     }
 
     .header_search input {
-        width: min(500px, 45vw);
+        width: 100%;
     }
 
     .navbar {
         width: 100%;
         flex-wrap: wrap;
-        gap: 25px;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* HERO */
+
+    .banner {
+        height: 450px;
+    }
+
+    .banner_info {
+        left: 40px;
+        width: 450px;
+    }
+
+    .banner_info h1 {
+        font-size: clamp(30px, 4vw, 38px);
     }
 
     .sekil {
@@ -1096,17 +1313,16 @@ img {
         width: min(450px, calc(100% - 70px));
     }
 
-    .melumat h1 {
-        font-size: clamp(27px, 4vw, 42px);
-    }
+    /* MARKALAR */
 
-    .marka {
+    .marka,
+    .markalar {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
+    /* SATIŞ */
+
     .satis {
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 20px;
     }
 
@@ -1117,15 +1333,15 @@ img {
         width: calc(50% - 10px);
     }
 
+    /* BUYER */
+
     .buyer {
-        width: 100%;
         flex-direction: column;
         align-items: stretch;
     }
 
     .sol_teref {
         width: 100%;
-        height: auto;
         min-height: 400px;
         margin-top: 60px;
     }
@@ -1145,35 +1361,36 @@ img {
         margin-top: 0;
     }
 
+    /* SAAT KARTLARI */
+
     .watclar {
-        width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
-    .watchcard {
-        width: calc(25% - 12px);
+    .watclar .watch {
+        width: calc((100% - 40px) / 3);
     }
+
+    /* POPULAR MODELS */
 
     .rolex {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .popularcard {
-        width: calc(25% - 23px);
+        width: calc((100% - 40px) / 3);
     }
 
-    .popularcard img {
-        width: 100%;
-    }
+    /* ƏSAS MƏLUMATLAR */
 
     .esas {
-        flex-wrap: wrap;
         justify-content: space-between;
         gap: 30px;
     }
 
+    /* JURNAL */
+
     .asagi {
-        width: 100vw;
         padding: 60px 30px;
     }
 
@@ -1184,8 +1401,7 @@ img {
 
     .profil,
     .profil2 {
-        width: 50%;
-        min-width: 0;
+        width: calc(50% - 25px);
     }
 
     .profil img,
@@ -1196,13 +1412,14 @@ img {
         object-fit: cover;
     }
 
+    /* INSTAGRAM */
+
     .adamlarr {
-        width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .adamcard {
-        width: calc(25% - 15px);
+        width: calc((100% - 40px) / 3);
     }
 
     .adamcard img {
@@ -1211,8 +1428,9 @@ img {
         aspect-ratio: 1 / 1;
     }
 
+    /* MƏTN KARTLARI */
+
     .cardlar {
-        flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
     }
@@ -1222,12 +1440,12 @@ img {
     .card3,
     .card4 {
         width: calc(50% - 10px);
-        height: auto;
         min-height: 400px;
     }
 
+    /* FOOTER */
+
     .footer {
-        width: 100vw;
         padding: 40px 30px;
     }
 
@@ -1237,18 +1455,18 @@ img {
         gap: 30px;
     }
 
-    .footer2,
-    .footer3 {
-        align-items: flex-start;
-        gap: 30px;
-    }
-
     .footer1,
     .footer2,
     .footer3,
     .bayraqlar,
     .secimlerim {
         width: 100%;
+    }
+
+    .footer2,
+    .footer3 {
+        align-items: flex-start;
+        gap: 30px;
     }
 
     .secim,
@@ -1286,12 +1504,11 @@ img {
         gap: 25px;
     }
 
+    /* DROPDOWN */
+
     .bolmee {
-        width: 100vw;
-        max-width: 100%;
-        left: 0;
-        transform: none;
-        flex-wrap: wrap;
+        top: 100px;
+        padding: 30px;
         max-height: 80vh;
         overflow-y: auto;
     }
@@ -1300,14 +1517,11 @@ img {
     .bolmee2,
     .bolmee3,
     .bolmee4 {
-        flex: 1 1 220px;
+        flex: 1 1 180px;
         min-width: 0;
     }
 
     .metnler {
-        width: 100%;
-        max-width: 100%;
-        flex-wrap: wrap;
         gap: 25px;
     }
 }
@@ -1340,9 +1554,13 @@ img {
         align-items: center;
         justify-content: flex-start;
         font-size: 22px;
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .logo {
+        grid-column: 2;
+        grid-row: 1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1354,6 +1572,8 @@ img {
     }
 
     .login {
+        grid-column: 3;
+        grid-row: 1;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -1373,6 +1593,7 @@ img {
 
     .header_search {
         grid-column: 1 / -1;
+        grid-row: 2;
         width: 100%;
         margin-top: 8px;
     }
@@ -1390,29 +1611,73 @@ img {
 
     /* HERO */
 
-    .sekil {
-        width: 100vw;
+    .banner {
         height: 350px;
-        margin-left: calc(50% - 50vw);
     }
 
+    .banner_info {
+        left: 20px;
+        width: calc(100% - 40px);
+        max-width: none;
+    }
+
+    .banner_info h4 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .banner_info h1 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .banner_info button {
+        padding: 9px 20px;
+        font-size: 13px;
+    }
+
+    .sekil {
+        width: 100%;
+        height: 350px;
+    }
+
+    .melumat {
+        left: 15px;
+        right: 15px;
+        width: auto;
+        max-width: none;
+    }
+
+    .melumat h1 {
+        font-size: 26px;
+    }
 
     /* MARKALAR */
 
-    .marka {
+    .secin {
+        margin-top: 40px;
+    }
+
+    .marka,
+    .markalar {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
     }
 
     .marka p,
-    .marka a {
+    .marka a,
+    .markalar p,
+    .markalar a {
         padding: 14px 8px;
     }
 
     /* SATIŞ */
 
+    .musteri {
+        margin-top: 60px;
+    }
+
     .satis {
-        flex-wrap: wrap;
         gap: 12px;
     }
 
@@ -1421,8 +1686,8 @@ img {
     .satis3,
     .satis4 {
         width: 100%;
-        height: auto;
         min-height: 150px;
+        height: auto;
     }
 
     /* BUYER */
@@ -1445,27 +1710,36 @@ img {
 
     .sag_teref img {
         width: 100%;
+        height: auto;
         padding: 15px 0;
     }
 
     /* SAAT KARTLARI */
+
+    .watchlar {
+        margin-top: 60px;
+    }
 
     .watclar {
         width: 100%;
         gap: 12px;
     }
 
-    .watchcard {
+    .watclar .watch {
         width: calc(50% - 6px);
     }
 
-    .watchcard img {
+    .watclar .watch img {
         width: 100%;
         height: auto;
         aspect-ratio: 1 / 1;
     }
 
     /* POPULAR MODELS */
+
+    .popularr {
+        margin-top: 60px;
+    }
 
     .rolex {
         gap: 12px;
@@ -1483,7 +1757,9 @@ img {
     .popularcard h4 {
         left: 0;
         width: 100%;
+        max-width: 100%;
         padding-left: 12px;
+        padding-right: 8px;
     }
 
     /* ƏSAS MƏLUMATLAR */
@@ -1543,6 +1819,10 @@ img {
 
     /* INSTAGRAM */
 
+    .adamlar {
+        margin-top: 60px;
+    }
+
     .adamlarr {
         width: 100%;
         gap: 12px;
@@ -1561,6 +1841,7 @@ img {
     /* MƏTN KARTLARI */
 
     .cardlar {
+        margin-top: 60px;
         flex-direction: column;
         gap: 15px;
     }
@@ -1735,6 +2016,14 @@ img {
         font-size: 10px;
     }
 
+    .banner {
+        height: 300px;
+    }
+
+    .banner_info h1 {
+        font-size: 23px;
+    }
+
     .sekil {
         height: 300px;
     }
@@ -1746,12 +2035,6 @@ img {
 
     .melumat h1 {
         font-size: 23px;
-    }
-
-    .watchcard,
-    .popularcard,
-    .adamcard {
-        width: 100%;
     }
 
     .langu,
@@ -1767,151 +2050,80 @@ img {
         padding: 30px 14px;
     }
 }
-.sekil {
-    position: relative;
-    overflow: hidden;
-}
+/* HEADER DÜZƏLİŞİ */
 
-.melumat {
-    position: absolute;
-    left: clamp(15px, 7vw, 100px);
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    max-width: 500px;
-    box-sizing: border-box;
-    overflow-wrap: anywhere;
-}
-
-.melumat h1 {
-    max-width: 100%;
-    font-size: clamp(22px, 4vw, 50px);
-    line-height: 1.2;
-}
-
-@media (max-width: 700px) {
-    .melumat {
-        left: 15px;
-        right: 15px;
-        max-width: none;
-    }
-}
-/* HERO YAZISININ DÜZƏLİŞİ */
-.sekil {
-    position: relative;
-    overflow: hidden;
-}
-
-.sekil .melumat {
-    position: absolute;
-    top: 50%;
-    left: 7%;
-    right: auto;
-    transform: translateY(-50%);
-    width: 42%;
-    max-width: 500px;
-    padding: 0;
-    z-index: 2;
-    overflow-wrap: anywhere;
-}
-
-.sekil .melumat h1 {
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
     width: 100%;
-    max-width: 100%;
-    font-size: clamp(22px, 4vw, 50px);
-    line-height: 1.2;
-    overflow-wrap: anywhere;
+    height: 100px;
 }
 
-@media (max-width: 700px) {
-    .sekil .melumat {
-        left: 15px;
-        right: 15px;
-        width: auto;
-        max-width: none;
-    }
-}
-
-@media (max-width: 400px) {
-    .sekil .melumat h1 {
-        font-size: 23px;
-    }
-}
-.sekil {
+.header_search {
     position: relative;
+    width: 600px;
+    max-width: 50%;
+}
+
+.header_search input {
+    width: 100%;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+/* BANNER */
+
+.banner {
+    position: relative;
+    width: 100vw;
+    height: 500px;
+    margin-left: calc(50% - 50vw);
+    margin-top: 20px;
     overflow: hidden;
 }
 
-.sekil .melumat {
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner_info {
     position: absolute;
     top: 50%;
-    left: max(30px, calc((100% - 1200px) / 2 + 30px));
+    left: max(20px, calc((100vw - 1200px) / 2));
     transform: translateY(-50%);
-    width: min(500px, calc(100% - 60px));
-    max-width: 500px;
+    width: 500px;
+    max-width: calc(100% - 40px);
     color: white;
-    z-index: 2;
 }
 
-.sekil .melumat h1 {
-    font-size: clamp(22px, 4vw, 50px);
-    line-height: 1.2;
-}
 
-@media (max-width: 700px) {
-    .sekil .melumat {
-        left: 15px;
-        width: calc(100% - 30px);
-    }
-}
-@media (max-width: 700px) {
-    .header {
-        display: grid;
-        grid-template-columns: 30px minmax(0, 1fr) auto;
-        align-items: center;
-        width: 100%;
-        gap: 8px;
-    }
 
-    .menu {
-        grid-column: 1;
-        grid-row: 1;
-    }
+/* PLANŞET */
 
-    .logo {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    .login {
-        grid-column: 3;
-        grid-row: 1;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        white-space: nowrap;
-    }
-
-    .header_search {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        width: 100%;
-    }
-}
-@media (min-width: 701px) and (max-width: 1200px) {
-
+@media (max-width: 1200px) {
     .header {
         display: grid;
         grid-template-columns: 40px minmax(0, 1fr) auto;
-        align-items: center;
-        justify-content: initial;
-        width: 100%;
         gap: 15px;
+        height: auto;
         padding: 15px 0;
     }
 
     .menu {
+        display: flex;
         grid-column: 1;
         grid-row: 1;
     }
@@ -1925,9 +2137,54 @@ img {
     .login {
         grid-column: 3;
         grid-row: 1;
+    }
+
+    .header_search {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .navbar {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .banner {
+        height: 450px;
+    }
+
+    .marka,
+    .markalar {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* TELEFON */
+
+@media (max-width: 700px) {
+    .header {
+        display: grid;
+        grid-template-columns: 30px minmax(0, 1fr) auto;
+        gap: 8px;
+        padding: 12px 8px;
+    }
+
+    .menu {
         display: flex;
-        align-items: center;
-        white-space: nowrap;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .logo {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .login {
+        grid-column: 3;
+        grid-row: 1;
     }
 
     .header_search {
@@ -1936,13 +2193,55 @@ img {
         width: 100%;
     }
 
-    .header_search input {
-        width: 100%;
+    .navbar {
+        display: none;
     }
 
-    .navbar {
-        grid-column: 1 / -1;
-        grid-row: 3;
+    .banner {
+        height: 350px;
+    }
+
+    .banner_info {
+        left: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .banner_info h1 {
+        font-size: 26px;
+    }
+
+    .marka,
+    .markalar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+} 
+@media (max-width: 1200px) {
+    .marka {
+        display: grid;
+        grid-template-columns: repeat(5, 230px);
         justify-content: center;
+        gap: 12px;
+    }
+}
+@media (max-width: 700px) {
+    .marka {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .marka a {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: 55px;
+    }
+
+    .marka button {
+        grid-column: 1 / -1;
+        width: 170px;
+        height: 44px;
+        justify-self: center;
     }
 }
