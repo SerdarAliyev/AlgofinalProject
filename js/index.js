@@ -5,94 +5,109 @@ const watclar = document.querySelector(".watclar")
 const rolex = document.querySelector(".rolex")
 const adamlarr = document.querySelector(".adamlarr")
 
-fetch("../data/banner.json")
-    .then(response => response.json())
-    .then((ban) => {
-        banner.innerHTML = `
-<img src="${ban.foto}" alt="Saat">
-<div class="banner_info">
-<h4>${ban.badge}</h4>
-<h1>${ban.title}</h1>
-<button>${ban.button_text}</button>
-</div>
-`
-
-    })
-
-
-fetch("../data/markalar.json")
-    .then(response => response.json())
-    .then((mark) => {
-        markalar.innerHTML = `
-            <div class="marka">
-                ${mark.map((item) => `
-                    <a href="${item.link}">${item.name}</a>
-                `).join("")}
-
-                <button>Display all</button>
-            </div>
-        `;
-    });
+try {
+    fetch("../data/banner.json")
+        .then(response => response.json())
+        .then((ban) => {
+            banner.innerHTML = `
+                <img src="${ban.foto}" alt="Saat">
+                <div class="banner_info">
+                    <h4>${ban.badge}</h4>
+                    <h1>${ban.title}</h1>
+                    <button>${ban.button_text}</button>
+                </div>
+            `;
+        });
+} catch (error) {
+    console.error("Banner xətası:", error);
+}
 
 
-
-fetch("../data/satislar.json")
-    .then(responsee => responsee.json())
-    .then((data) => {
-        satis.innerHTML = data.map((item) => `
-            <div class="${item.class}">
-                <img src="${item.img}" alt="Saat">
-                <h3>${item.title}</h3>
-                <p>${item.text}</p>
-            </div>
-        `).join("");
-    });
-
-
-
-
-fetch("../data/saatlar.json")
-    .then(response => response.json())
-    .then((data) => {
-        watclar.innerHTML = data.map((item) => `
-            <div class="watch">
-                <img src="${item.foto}">
-                <p>${item.soz}</p>
-            </div>
-        `).join("");
-    })
+try {
+    fetch("../data/markalar.json")
+        .then(response => response.json())
+        .then((mark) => {
+            markalar.innerHTML = `
+                <div class="marka">
+                    ${mark.map((item) => `
+                        <a href="${item.link}">${item.name}</a>
+                    `).join("")}
+                    <button>Display all</button>
+                </div>
+            `;
+        });
+} catch (error) {
+    console.error("Markalar xətası:", error);
+}
 
 
+try {
+    fetch("../data/satislar.json")
+        .then(response => response.json())
+        .then((data) => {
+            satis.innerHTML = data.map((item) => `
+                <div class="${item.class}">
+                    <img src="${item.img}" alt="Saat">
+                    <h3>${item.title}</h3>
+                    <p>${item.text}</p>
+                </div>
+            `).join("");
+        });
+} catch (error) {
+    console.error("Satışlar xətası:", error);
+}
 
 
-
-    
-fetch("../data/popular.json")
-    .then(data => data.json())
-    .then((popular) => {
-        console.log(popular)
-        popular.forEach((saatm) => {
-            rolex.innerHTML += `
-      <div class="popularcard">
-          <img src="${saatm.foto}">
-            <p>${saatm.soz}</p>
-            <h4>${saatm.sozz}</h4>
-        </div>
-    `
-        })
-    })
+try {
+    fetch("../data/saatlar.json")
+        .then(response => response.json())
+        .then((data) => {
+            watclar.innerHTML = data.map((item) => `
+                <div class="watch">
+                    <img src="${item.foto}">
+                    <p>${item.soz}</p>
+                </div>
+            `).join("");
+        });
+} catch (error) {
+    console.error("Saatlar xətası:", error);
+}
 
 
-fetch("../data/watclar.json")
-    .then(response => response.json())
-    .then((data) => {
-        adamlarr.innerHTML = data.map((item) => `
-            <div class="adamcard">
-                <img src="${item.foto}">
-            </div>
-        `).join("");
-    })
+try {
+    fetch("../data/popular.json")
+        .then(response => response.json())
+        .then((popular) => {
+            console.log(popular);
 
+            popular.forEach((saatm) => {
+                rolex.innerHTML += `
+                    <div class="popularcard">
+                        <img src="${saatm.foto}">
+                        <p>${saatm.soz}</p>
+                        <h4>${saatm.sozz}</h4>
+                    </div>
+                `;
+            });
+        });
+} catch (error) {
+    console.error("Popular xətası:", error);
+}
+
+
+try {
+    fetch("../data/watclar.json")
+        .then(response => response.json())
+        .then((data) => {
+            adamlarr.innerHTML = data.map((item) => `
+                <div class="adamcard">
+                    <img src="${item.foto}">
+                </div>
+            `).join("");
+        });
+} catch (error) {
+    console.error("Watclar xətası:", error);
+}
 
 
 
