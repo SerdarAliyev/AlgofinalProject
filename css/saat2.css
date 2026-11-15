@@ -1164,3 +1164,8 @@
     top: 250px;
     z-index: 2;
 }
+.saatsekli {
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}

@@ -593,3 +593,10 @@
         height: 105px;
     }
 }
+.sekil img,
+.sekill img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: auto;
+}

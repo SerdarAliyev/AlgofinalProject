@@ -1,0 +1,350 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 20px;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 50px;
+    width: 100%;
+}
+
+.loginn {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 1px solid #bfbfbf;
+    width: 578px;
+    min-height: 730px;
+    height: auto;
+    border-radius: 10px;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.input,
+.input2 {
+    width: 100%;
+    position: relative;
+}
+
+.input input,
+.input2 input {
+    width: 100%;
+    height: 44px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 2px solid #E5E5E5;
+    outline-color: #006CFF;
+}
+
+.cehck {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cehck input {
+    position: relative;
+    top: -19px;
+}
+
+.cehck a {
+    color: black;
+}
+
+.cehck a:hover {
+    color: #006CFF;
+}
+
+.qebul {
+    display: flex;
+    position: relative;
+}
+
+.pasword {
+    cursor: pointer;
+    border-bottom: 2px solid;
+}
+
+.goz {
+    position: absolute;
+    right: 15px;
+    top: 35px;
+    cursor: pointer;
+}
+
+.btn {
+    display: block;
+}
+
+.btn2 {
+    display: none;
+}
+
+.btn,
+.btn2 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+
+.btnn button {
+    width: 100%;
+    height: 44px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    background-color: #1A253C;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btnn button:hover {
+    background-color: #33466e;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.xet,
+.xet2 {
+    border-bottom: 1px solid rgb(187, 187, 187);
+    flex: 1;
+}
+
+.butonlar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.buton1,
+.buton2 {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid;
+    width: 100%;
+    height: 44px;
+    padding: 10px;
+    background: none;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.buton1:hover,
+.buton2:hover {
+    background-color: #E5E5E5;
+}
+
+.btnnn {
+    width: 100%;
+}
+
+.btnnn button {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid;
+    width: 100%;
+    height: 44px;
+    padding: 10px;
+    background: none;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btnnn button:hover {
+    background-color: #E5E5E5;
+}
+
+.text a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    transition: all 0.2s ease;
+}
+
+.text a:hover {
+    color: #006CFF;
+}
+
+.sozler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 90px;
+    padding-bottom: 20px;
+    gap: 40px;
+}
+
+.sozler a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    transition: all 0.2s ease;
+}
+
+.sozler a:hover {
+    color: #006CFF;
+}
+
+.sozlerr {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* PLANŞET */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .row {
+        max-width: 100%;
+    }
+
+    .loginn {
+        width: 550px;
+        padding: 40px;
+    }
+
+    .sozler {
+        gap: 25px;
+    }
+}
+
+/* TELEFON */
+@media (max-width: 650px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .login {
+        margin-top: 25px;
+        gap: 25px;
+    }
+
+    .loginn {
+        width: 100%;
+        max-width: 500px;
+        min-height: auto;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .input,
+    .input2,
+    .btnn,
+    .butonlar,
+    .btnnn {
+        width: 100%;
+    }
+
+    .input input,
+    .input2 input {
+        width: 100%;
+    }
+
+    .btnn button,
+    .buton1,
+    .buton2,
+    .btnnn button {
+        width: 100%;
+    }
+
+     .cehck input{
+        position: relative;
+        top: -38px;
+    }
+    .or {
+        gap: 10px;
+    }
+
+    .sozler {
+        gap: 15px;
+        margin-top: 35px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .sozlerr {
+        margin-top: 25px;
+        font-size: 13px;
+    }
+}
+
+/* KİÇİK TELEFON */
+@media (max-width: 380px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .loginn {
+        padding: 25px 15px;
+        gap: 22px;
+    }
+
+    .cehck input{
+        position: relative;
+        top: -20px;
+    }
+    .qebul {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .cehck {
+        font-size: 12px;
+    }
+    .sozler {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .buton1,
+    .buton2 {
+        gap: 10px;
+        font-size: 12px;
+    }
+}

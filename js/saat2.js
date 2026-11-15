@@ -100,7 +100,6 @@ secim.forEach((secim) => {
 let rolexx = [
     {
         product_img: "https://img.chrono24.com/images/uhren/69v675pxywpo-cx1uq4vhf5waytz1i8p45z52-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/69v675pxywpo-cx1uq4vhf5waytz1i8p45z52-Square360.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/qpq41tsjzccc-4glfosfup47rk6kvg3yxegxi-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/d5kf2uu4uq4s-e7ad855etcspldm2vwxqnp0v-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/f8ri5r1ntfyu-7lnlyfs3tvmcs2psoa6rg00t-Square420.jpg",
@@ -114,7 +113,6 @@ let rolexx = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/47455085-1os141toojqdq5rtvotpbt3k-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/47455085-1os141toojqdq5rtvotpbt3k-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/47455085-gg9be232zr9xsz8o01r302ga-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/47455085-m89bcejqmbyp2n8wweo845st-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/47455085-6n2dd1ayzd4lgvbe5of2bo4s-Square420.jpg",
@@ -128,7 +126,6 @@ let rolexx = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/48756964-6r6a29f3jhixz3bgfel6kxha-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/48756964-6r6a29f3jhixz3bgfel6kxha-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/48756964-w7gbun2l6yh5ijh28slhgvzo-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/48756964-telc8ycc6w6y7ro6t64ppc3n-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/48756964-8t2eomrn5c41mqf9f954a4op-Square420.jpg",
@@ -142,7 +139,6 @@ let rolexx = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/47805284-vbu3wckn9bt0x022ub4eowyh-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/47805284-vbu3wckn9bt0x022ub4eowyh-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/47805284-dwcmdc4rptbocu8gfq8jcuos-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/47805284-1hwhfa476clbqoavquxbgnsr-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/47805284-auii8fiuvxomkm410gykoaxx-Square420.jpg",
@@ -159,7 +155,6 @@ let rolexx = [
 let prom = [
     {
         product_img: "https://img.chrono24.com/images/uhren/49060614-yp8y2mn2kyw1hx3fs5ruz193-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/49060614-yp8y2mn2kyw1hx3fs5ruz193-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/49060614-utyg3rhoecdhedy187dytng3-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/49060614-8xv27z70ff9h2zbrnjuaebfl-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/49060614-3lzljp8b3p3smbqzazmusv6c-Square420.jpg",
@@ -173,7 +168,6 @@ let prom = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/48620436-ufxanwboxsb8ywmgetslejzw-Square420.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/48620436-ufxanwboxsb8ywmgetslejzw-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/48620436-n1nirfj6s9zb7156kbwva2g2-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/48620436-ndj8a8otj9sbh7776hfl6dpc-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/48620436-t64u7duwiyu851yfjeomfab4-Square420.jpg",
@@ -187,7 +181,6 @@ let prom = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/6lpuk3ji3qp7-iwm2bkituqyncghjx1yg2znu-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/48654947-2dumhrp9dvbh28e8v8x20drs-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/48654947-36kevj6k2c1olw62im7r3j67-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/48654947-kfipv741doqgyudnc0xh6sky-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/48654947-vkcktblvg7hj8tdh36cv5rcr-Square420.jpg",
@@ -201,7 +194,6 @@ let prom = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/uok0003vl82j-kgs7s6y0zs8b2dmmq37mjsw5-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/uok0003vl82j-kgs7s6y0zs8b2dmmq37mjsw5-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/jp9le553arxn-6t5j9fk5dfueycl5vg3u7j20-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/qrsft2t71vyd-bkbiqtk16wta2josdls1yy23-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/7rhu76eqolub-v4if1ahtk2vdinh4da40bv1k-Square420.jpg",
@@ -543,12 +535,28 @@ let sonsast = [
     },
 ]
 
+
+
 function send_Data(data, send_div, klass = "") {
     data.forEach((card) => {
 
-        let rolex = document.createElement("div")
+        let rolex = document.createElement("div");
 
-        rolex.className = `rolexdi ${klass || ""} ${card.product_key === "Next" ? "nextcard" : ""} ${card.model === "Worry-Free Watch Purchases" ? "buyer-card" : ""} ${card.sozd ? "news-card" : ""}`
+        rolex.className = `rolexdi ${klass || ""} ${
+            card.product_key === "Next" ? "nextcard" : ""
+        } ${
+            card.model === "Worry-Free Watch Purchases" ? "buyer-card" : ""
+        } ${card.sozd ? "news-card" : ""}`;
+
+        let sekiller = [
+            card.product_img,
+            card.product_img1,
+            card.product_img2,
+            card.product_img3,
+            card.product_img4,
+            card.product_img5,
+            card.product_img6
+        ].filter(Boolean);
 
         rolex.innerHTML = `
             ${card.product_img ? `
@@ -578,30 +586,61 @@ function send_Data(data, send_div, klass = "") {
                         <div class="sag">
                             <i class="fas fa-chevron-left"></i>
                         </div>
+
                         <div class="sol">
                             <i class="fas fa-chevron-right"></i>
                         </div>
                     </div>
                 ` : ""}
             `}
-        `
+        `;
 
-   rolex.addEventListener("click", () => {
+        let sekil = rolex.querySelector(".saatsekli");
+        let sag = rolex.querySelector(".sag");
+        let sol = rolex.querySelector(".sol");
 
-    if (card.product_key === "Next") return
-    if (card.model === "Worry-Free Watch Purchases") return
-    if (card.sozd === "Always informed.") return
+        let index = 0;
 
-    localStorage.setItem("card", JSON.stringify(card))
-    window.location.href = "detal.html"
+        if (sag && sol && sekil) {
 
-})
+            sag.addEventListener("click", (e) => {
+                e.stopPropagation();
 
-        send_div.appendChild(rolex)
+                index--;
 
-    })
+                if (index < 0) {
+                    index = sekiller.length - 1;
+                }
+
+                sekil.src = sekiller[index];
+            });
+
+            sol.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                index++;
+
+                if (index >= sekiller.length) {
+                    index = 0;
+                }
+
+                sekil.src = sekiller[index];
+            });
+        }
+
+        rolex.addEventListener("click", () => {
+
+            if (card.product_key === "Next") return;
+            if (card.model === "Worry-Free Watch Purchases") return;
+            if (card.sozd === "Always informed.") return;
+
+            localStorage.setItem("card", JSON.stringify(card));
+            window.location.href = "detal.html";
+        });
+
+        send_div.appendChild(rolex);
+    });
 }
-
 send_Data(rolexx, rolexler)
 send_Data(prom, promotedd)
 send_Data(iki, ikinci)
@@ -613,5 +652,3 @@ send_Data(saattt, data)
 send_Data(sozler, sozlerrr)
 send_Data(wotclar, wotlar)
 send_Data(sonsast, son, "sonuncu")
-
-
