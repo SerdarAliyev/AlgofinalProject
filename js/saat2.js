@@ -146,6 +146,7 @@ function send_Data(data, send_div, klass = "") {
         let rolex = document.createElement("div");
 
         rolex.className = `rolexdi ${klass || ""} ${
+
             card.product_key === "Next" ? "nextcard" : ""
         } ${
             card.model === "Worry-Free Watch Purchases" ? "buyer-card" : ""
@@ -245,3 +246,5 @@ function send_Data(data, send_div, klass = "") {
     });
 }
 
+const params = new URLSearchParams(window.location.search);
+const soz = params.get("search");

@@ -2747,3 +2747,30 @@ img {
         overflow-y: auto;
     }
 }
+.adamcard {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.adamcard img {
+    width: 100%;
+    display: block;
+}
+
+.hovertext {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.adamcard:hover .hovertext {
+    opacity: 1;
+}

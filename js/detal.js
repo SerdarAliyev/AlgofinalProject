@@ -79,3 +79,8 @@ document.querySelector(".seria").textContent = data.seria || "";
 document.querySelector(".product-key").textContent = data.product_key || "";
 document.querySelector(".product-key2").textContent = data.product_key_2 || "";
 document.querySelector(".melumat").textContent = data.melumat || "";
+
+document.querySelector(".buy-btn").addEventListener("click", () => {
+    localStorage.setItem("alis_saat", JSON.stringify(data));
+    window.location.href = "alis.html";
+});

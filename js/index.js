@@ -102,6 +102,10 @@ try {
             adamlarr.innerHTML = data.map((item) => `
                 <div class="adamcard">
                     <img src="${item.foto}">
+
+                    <div class="hovertext">
+                        ${item.ad || ""}
+                    </div>
                 </div>
             `).join("");
         });
@@ -154,4 +158,19 @@ window.addEventListener("resize", function () {
 
     bolmee.style.top = top;
     metnler.style.top = top;
+});
+const axtaris = document.querySelector(".header_search input");
+
+axtaris.addEventListener("keydown", (e) => {
+
+    if (e.key === "Enter") {
+
+        let soz = axtaris.value.toLowerCase().trim();
+
+        if (soz.includes("rolex")) {
+            window.location.href = `saat2.html?search=${encodeURIComponent(soz)}`;
+        }
+
+    }
+
 });

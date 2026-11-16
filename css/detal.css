@@ -283,20 +283,24 @@
 
 /* BUY BUTTON */
 
-.buy button {
+.buy-btn {
     width: 100%;
     height: 50px;
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
     background-color: #1A253C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     border-radius: 7px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.buy button:hover {
+.buy-btn:hover {
     background-color: #374E80;
 }
 
