@@ -2774,3 +2774,46 @@ img {
 .adamcard:hover .hovertext {
     opacity: 1;
 }
+.facts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 60px;
+}
+
+.fact {
+    width: 30%;
+    text-align: center;
+}
+.important{
+    margin-top: 100px;
+}
+.fact h3{
+    font-size: 54px;
+}
+.facts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.fact {
+    width: 30%;
+    text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .fact {
+        width: 45%;
+    }
+}
+
+/* Telefon */
+@media (max-width: 480px) {
+    .fact {
+        width: 100%;
+    }
+}
