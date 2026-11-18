@@ -60,21 +60,21 @@ try {
 }
 
 
-try {
-    fetch("../data/saatlar.json")
-        .then(response => response.json())
-        .then((data) => {
-            watclar.innerHTML = data.map((item) => `
-                <div class="watch">
-                    <img src="${item.foto}">
-                    <p>${item.soz}</p>
-                </div>
-            `).join("");
-        });
-} catch (error) {
-    console.error("Saatlar xətası:", error);
-}
-
+fetch("../data/saatlar.json")
+    .then(response => response.json())
+    .then((data) => {
+        watclar.innerHTML = data.map((item) => `
+    <div class="watch">
+        <img 
+            src="${item.foto}" 
+            onclick="window.location.href='https://www.instagram.com/reels/DfAEqkpqiXb/'"
+            style="cursor: pointer;"
+        >
+        <p>${item.soz}</p>
+    </div>
+`).join("");
+    })
+    .catch(error => console.log(error));
 
 try {
     fetch("../data/popular.json")
@@ -206,3 +206,5 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 counters.forEach(counter => observer.observe(counter));
+
+
