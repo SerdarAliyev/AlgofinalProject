@@ -1,0 +1,855 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    height: 100px;
+    width: 100%;
+}
+
+.logo img {
+    max-width: 180px;
+    width: 100%;
+}
+
+.input {
+    position: relative;
+    flex: 1;
+    max-width: 600px;
+}
+
+.input i {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    font-size: 20px;
+}
+
+.input input {
+    width: 100%;
+    height: 50px;
+    padding: 10px 10px 10px 50px;
+    border: none;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    outline: none;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.login i {
+    font-size: 20px;
+}
+
+.login:hover {
+    color: #29ACFF;
+}
+
+/* SECIMLER */
+
+.secimler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.buy,
+.watch,
+.securt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buy:hover,
+.watch:hover,
+.best:hover,
+.magazin:hover,
+.collec:hover,
+.pulse:hover,
+.faq:hover,
+.securt:hover {
+    color: #29ACFF;
+    cursor: pointer;
+}
+
+/* MENU */
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+/* BANNER */
+
+.banner {
+    position: relative;
+    width: 100vw;
+    height: 500px;
+    margin-left: calc((1200px - 100vw) / 2);
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sozler {
+    position: absolute;
+    top: 60%;
+    left: max(20px, calc((100vw - 1200px) / 2));
+    transform: translateY(-50%);
+    width: 500px;
+    max-width: calc(100% - 40px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.sozler p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.sozler h1 {
+    width: 100%;
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+/* TEXT */
+
+.text {
+    margin-top: 70px;
+    width: 100%;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.7;
+    width: 100%;
+    max-width: 900px;
+}
+
+
+/* SAAT SEKILLERI */
+
+.saat_sekilleri {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.saat_sekilleri h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.sekiller {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.saat1 {
+    flex: 1;
+    min-width: 0;
+    cursor: pointer;
+}
+
+.saat1 img {
+    display: block;
+    width: 100%;
+    height: 521px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.saat1 h2 {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.saat1 p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .sekiller {
+        gap: 12px;
+    }
+
+    .saat1 img {
+        height: 300px;
+    }
+}
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+    .saat_sekilleri {
+        padding: 0 15px;
+    }
+
+    .saat_sekilleri h1 {
+        font-size: 25px;
+    }
+
+    .sekiller {
+        flex-direction: column;
+    }
+
+    .saat1 {
+        width: 100%;
+    }
+
+    .saat1 img {
+        height: auto;
+    }
+}
+
+/* SAAT KARTLARI */
+.watclar {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.rolexdi {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* ŞƏKİL */
+.rolexdi .saatsekli {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* MODEL */
+.rolexdi .model {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 18px;
+}
+
+/* SERİYA */
+.rolexdi > p:first-of-type {
+    font-size: 17px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* QİYMƏT */
+.rolexdi > h4:not(.model) {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* ÇATDIRILMA */
+.rolexdi > p:last-of-type {
+    font-size: 14px;
+    color: #555;
+}
+
+/* POPULAR VƏ ÜRƏK */
+.rolexdi .sozler {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: none;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    z-index: 10;
+}
+
+.rolexdi .sozler h4 {
+    display: block;
+    background: white;
+    color: black;
+    padding: 9px 14px;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.rolexdi .sozler i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    font-size: 23px;
+}
+
+.rolexdi .sozler i:hover {
+    color: #29ACFF;
+}
+
+/* SAĞ-SOL İKONLARI */
+.rolexdi .sag_sol {
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.rolexdi .sag_sol i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.rolexdi:hover .sag_sol i {
+    opacity: 1;
+}
+
+.rolexdi .sag_sol i:hover {
+    color: #29ACFF;
+}
+
+/* SAAT BÖLMƏSİ */
+.saatlar {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .watclar {
+        flex-wrap: wrap;
+    }
+
+    .rolexdi {
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+
+/* TELEFON */
+@media (max-width: 600px) {
+    .watclar {
+        gap: 20px;
+    }
+
+    .rolexdi {
+        flex: 0 0 100%;
+    }
+}
+.discover {
+    position: relative;
+    width: 100%;
+    margin-top: 120px;
+}
+
+.imgg {
+    width: 100%;
+}
+
+.imgg img {
+    display: block;
+    width: 100%;
+    height: 234px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.soz {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.soz h1 {
+    font-size: 40px;
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+.soz button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 170px;
+}
+
+/* FEATURED */
+
+.fetured {
+    width: 100%;
+    margin-top: 140px;
+}
+
+.fetured > h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.userler {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+}
+
+.user1 {
+    flex: 1;
+    min-width: 0;
+    cursor: pointer;
+}
+
+.user1 > img {
+    width: 100%;
+    height: 362px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.user1 > p {
+    font-size: 16px;
+    color: #777;
+    margin-top: 20px;
+}
+
+.user1 > h3 {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-top: 15px;
+}
+
+/* AUTHOR */
+
+.usr {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.usr > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.usr .text {
+    margin: 0;
+    width: auto;
+}
+
+.usr .text h4 {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.usr .text p {
+    font-size: 15px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .userler {
+        gap: 20px;
+    }
+
+    .user1 > img {
+        height: 260px;
+    }
+
+    .user1 > h3 {
+        font-size: 19px;
+    }
+}
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+    .fetured {
+        padding: 0 15px;
+    }
+
+    .userler {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .user1 {
+        width: 100%;
+    }
+
+    .user1 > img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .user1 > h3 {
+        font-size: 19px;
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 150px;
+    background-color: #1A253C;
+    color: white;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer li {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* FOOTER 1 */
+
+.footer1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.secim,
+.secim2,
+.secim3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.secim button {
+    width: 100%;
+    padding: 12px;
+    background: none;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+}
+
+.secimlerr {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid white;
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.secimlerr img {
+    width: 24px;
+    height: 18px;
+}
+
+.secim3 > p {
+    border: 1px solid white;
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* FOOTER 2 */
+
+.footer2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 60px;
+}
+
+.footer2 > div {
+    flex: 1;
+}
+
+.footer2 li,
+.footer3 li {
+    margin-top: 15px;
+}
+
+/* FOOTER 3 */
+
+.footer3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 70px;
+}
+
+.footer3 > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.foto {
+    display: flex;
+    gap: 10px;
+}
+
+.foto1 img {
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.footer3 .sekiller {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.foto2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.foto2 img {
+    max-width: 140px;
+    width: 100%;
+}
+
+.pay {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pay img {
+    width: 45px;
+}
+
+/* XET */
+
+.xet {
+    width: 100%;
+    max-width: 1200px;
+    border-bottom: 1px solid #36415B;
+    margin-top: 60px;
+    padding-bottom: 40px;
+}
+
+/* SON HISSE */
+
+.secimlerim {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+.liler ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+.liler li {
+    margin: 0;
+}
+
+.liler a {
+    text-decoration: none;
+}
+
+.iconlar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .footer1 {
+        flex-wrap: wrap;
+    }
+
+    .footer2,
+    .footer3 {
+        gap: 20px;
+    }
+
+    .footer2 h3,
+    .footer3 h3 {
+        font-size: 16px;
+    }
+
+    .secimlerim {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 35px 20px;
+    }
+
+    .footer1,
+    .footer2,
+    .footer3 {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .secim,
+    .secim2,
+    .secim3 {
+        width: 100%;
+    }
+
+    .secim button,
+    .secimlerr,
+    .secim3 > p {
+        width: 100%;
+    }
+
+    .footer2 > div,
+    .footer3 > div {
+        width: 100%;
+    }
+
+    .secimlerim {
+        align-items: flex-start;
+    }
+
+    .liler ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .iconlar {
+        margin-top: 15px;
+    }
+}

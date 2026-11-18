@@ -1,7 +1,7 @@
-
 const email = document.querySelector(".input input");
 const parol = document.querySelector(".parol");
 const btn = document.querySelector(".btnn button");
+const xeta = document.querySelector(".parol-xeta");
 
 email.value = "";
 parol.value = "";
@@ -18,7 +18,14 @@ btn.addEventListener("click", (e) => {
     let emailValue = email.value.trim();
     let parolValue = parol.value;
 
+    xeta.textContent = "";
+
     if (!emailValue || !parolValue) {
+        return;
+    }
+
+    if (parolValue.length < 7) {
+        xeta.textContent = "Parolunuz düzgün deyil!";
         return;
     }
 
@@ -30,6 +37,7 @@ btn.addEventListener("click", (e) => {
     );
 
     if (!yoxla) {
+        xeta.textContent = "Email və ya parolunuz düzgün deyil!";
         return;
     }
 

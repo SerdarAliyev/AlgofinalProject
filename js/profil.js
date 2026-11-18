@@ -5,6 +5,16 @@ const watclar = document.querySelector(".watclar")
 const rolex = document.querySelector(".rolex")
 const adamlarr = document.querySelector(".adamlarr")
 
+function girisiYoxla() {
+    if (!localStorage.getItem("activeUser")) {
+        window.location.replace("index.html");
+    }
+}
+
+girisiYoxla();
+
+window.addEventListener("pageshow", girisiYoxla);
+
 try {
     fetch("../data/banner.json")
         .then(response => response.json())
@@ -205,3 +215,20 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 counters.forEach(counter => observer.observe(counter));
+
+
+
+const profilIcon = document.querySelector(".profil_icon");
+const user = document.querySelector(".user");
+
+profilIcon.addEventListener("click", () => {
+    user.classList.toggle("active");
+});
+
+const logout = document.querySelector("#logout");
+
+logout.addEventListener("click", () => {
+    localStorage.removeItem("activeUser");
+
+    window.location.href = "index.html";
+});

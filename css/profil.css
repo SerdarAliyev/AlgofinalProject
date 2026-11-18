@@ -136,10 +136,10 @@ img {
     font-size: 20px;
 }
 
-.login:hover,
+/* .login:hover,
 .login a:hover {
     color: var(--primary-color);
-}
+} */
 
 .menu {
     display: none;
@@ -2833,4 +2833,70 @@ img {
     .fact {
         width: 100%;
     }
+}
+.login {
+    position: relative;
+}
+
+.profil_icon {
+    cursor: pointer;
+}
+
+.user {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    z-index: 1000;
+}
+
+.user.active {
+    display: block;
+}
+.user{
+    width: 400px;
+    height: 830px;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 17px;
+    position: absolute;
+    left: -120px;
+}
+.userr{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s ease;
+    width: 290px;
+    border-radius: 5px;
+}
+.userr:hover{
+    background-color: #f0f0f0;
+}
+.user1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.xet{
+    border-bottom: 1px solid #bdbdbd;
+    width: 320px;
+}
+.sozler{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+.partic{
+    width: 2999px;
+}
+.sozler a{
+    color: black;
+}
+.sozler a:hover{
+    color: rgb(18, 65, 255);
 }

@@ -14,7 +14,9 @@ try {
                 <div class="banner_info">
                     <h4>${ban.badge}</h4>
                     <h1>${ban.title}</h1>
-                    <button>${ban.button_text}</button>
+                    <a href="etrafli.html">
+    <button>${ban.button_text}</button>
+</a>
                 </div>
             `;
         });
