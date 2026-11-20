@@ -282,6 +282,9 @@
     left: 10px;
     right: 10px;
 }
+.rolexdi:hover .sag_sol i {
+    opacity: 1;
+}
 .sag_sol i{
     font-size: 20px;
     padding: 10px;
@@ -957,14 +960,16 @@
 .savee:hover{
     background-color: #E8E8E8;
 }
-.asagi{
+.asagi {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     background-color: #EFECEA;
-    width: 1521px;
     align-items: center;
+    width: 100%;
+    margin-left: calc(50% - 50vw);
+    max-width: none;
 }
 .magazinn{
     position: relative;

@@ -94,11 +94,13 @@ try {
 
             popular.forEach((saatm) => {
                 rolex.innerHTML += `
-                    <div class="popularcard">
-                        <img src="${saatm.foto}">
-                        <p>${saatm.soz}</p>
-                        <h4>${saatm.sozz}</h4>
-                    </div>
+                               <div class="popularcard">
+    <a href="${saatm.link}">
+        <img src="${saatm.foto}">
+        <p>${saatm.soz}</p>
+        <h4>${saatm.sozz}</h4>
+    </a>
+</div>
                 `;
             });
         });

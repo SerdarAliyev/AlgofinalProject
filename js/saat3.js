@@ -59,7 +59,6 @@ secim.forEach((secim) => {
 let rolexx = [
     {
         product_img: "https://img.chrono24.com/images/uhren/69v675pxywpo-cx1uq4vhf5waytz1i8p45z52-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/69v675pxywpo-cx1uq4vhf5waytz1i8p45z52-Square360.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/qpq41tsjzccc-4glfosfup47rk6kvg3yxegxi-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/d5kf2uu4uq4s-e7ad855etcspldm2vwxqnp0v-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/f8ri5r1ntfyu-7lnlyfs3tvmcs2psoa6rg00t-Square420.jpg",
@@ -73,7 +72,6 @@ let rolexx = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/49565439-vgbtb7j343bj6vhv9pu0x43s-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/49565439-vgbtb7j343bj6vhv9pu0x43s-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/49565439-ke1zbk9a6bkgcf0zx78p5dd7-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/49565439-1i6qrwgw5f8bilefl4c4xocf-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/49565439-vybxe8snbydblx5vl3y1x85k-Square420.jpg",
@@ -87,7 +85,6 @@ let rolexx = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/o857cff63x93-e88jhq4ozerqqsbfpisrzkql-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/48756964-6r6a29f3jhixz3bgfel6kxha-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/48756964-w7gbun2l6yh5ijh28slhgvzo-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/48756964-telc8ycc6w6y7ro6t64ppc3n-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/48756964-8t2eomrn5c41mqf9f954a4op-Square420.jpg",
@@ -101,7 +98,6 @@ let rolexx = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/hdtozinoor8o-rveb1xc2wd2iu4bkst3h8jth-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/47805284-vbu3wckn9bt0x022ub4eowyh-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/47805284-dwcmdc4rptbocu8gfq8jcuos-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/47805284-1hwhfa476clbqoavquxbgnsr-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/47805284-auii8fiuvxomkm410gykoaxx-Square420.jpg",
@@ -118,7 +114,6 @@ let rolexx = [
 let prom = [
     {
         product_img: "https://img.chrono24.com/images/uhren/49482859-ueid87r9ys68cg0nirvslvam-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/49060614-yp8y2mn2kyw1hx3fs5ruz193-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/49060614-utyg3rhoecdhedy187dytng3-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/49060614-8xv27z70ff9h2zbrnjuaebfl-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/49060614-3lzljp8b3p3smbqzazmusv6c-Square420.jpg",
@@ -132,7 +127,6 @@ let prom = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/v30on42dswdo-savwipvf3gbg8g3lwvaq008m-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/48620436-ufxanwboxsb8ywmgetslejzw-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/48620436-n1nirfj6s9zb7156kbwva2g2-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/48620436-ndj8a8otj9sbh7776hfl6dpc-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/48620436-t64u7duwiyu851yfjeomfab4-Square420.jpg",
@@ -146,7 +140,6 @@ let prom = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/49407816-ai2vyuuh7cpnwxbhzvn8dezv-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/48654947-2dumhrp9dvbh28e8v8x20drs-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/48654947-36kevj6k2c1olw62im7r3j67-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/48654947-kfipv741doqgyudnc0xh6sky-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/48654947-vkcktblvg7hj8tdh36cv5rcr-Square420.jpg",
@@ -160,7 +153,6 @@ let prom = [
     },
     {
         product_img: "https://img.chrono24.com/images/uhren/49689551-30dix30m74ccy17555x8laao-Square360.jpg",
-        product_img1: "https://img.chrono24.com/images/uhren/uok0003vl82j-kgs7s6y0zs8b2dmmq37mjsw5-Square420.jpg",
         product_img2: "https://img.chrono24.com/images/uhren/jp9le553arxn-6t5j9fk5dfueycl5vg3u7j20-Square420.jpg",
         product_img3: "https://img.chrono24.com/images/uhren/qrsft2t71vyd-bkbiqtk16wta2josdls1yy23-Square420.jpg",
         product_img4: "https://img.chrono24.com/images/uhren/7rhu76eqolub-v4if1ahtk2vdinh4da40bv1k-Square420.jpg",
@@ -550,6 +542,48 @@ function send_Data(data, send_div, klass = "") {
                 ` : ""}
             `}
         `
+        let sekil = rolex.querySelector(".saatsekli");
+        let sag = rolex.querySelector(".sag");
+        let sol = rolex.querySelector(".sol");
+
+        let sekiller = [
+            card.product_img,
+            card.product_img1,
+            card.product_img2,
+            card.product_img3,
+            card.product_img4,
+            card.product_img5,
+            card.product_img6
+        ].filter(Boolean);
+
+        let index = 0;
+
+        if (sag && sol && sekil) {
+
+            sag.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                index--;
+
+                if (index < 0) {
+                    index = sekiller.length - 1;
+                }
+
+                sekil.src = sekiller[index];
+            });
+
+            sol.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                index++;
+
+                if (index >= sekiller.length) {
+                    index = 0;
+                }
+
+                sekil.src = sekiller[index];
+            });
+        }
 
         rolex.addEventListener("click", () => {
 
@@ -579,4 +613,3 @@ send_Data(sozler, sozlerrr)
 send_Data(wotclar, wotlar)
 send_Data(sonsast, son, "sonuncu")
 send_Data(recom, recommen)
-

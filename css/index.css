@@ -573,7 +573,10 @@ img {
     width: calc((100% - 60px) / 4);
     min-width: 0;
 }
-
+.popularcard a{
+    text-decoration: none;
+    color: #000000;
+}
 .popularcard img {
     width: 100%;
     height: auto;

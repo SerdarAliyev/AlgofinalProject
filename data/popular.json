@@ -2,41 +2,49 @@
   {
     "foto": "https://cdn2.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65/images/topmodels/45-w36w6el32cnbsnxr0smetc2y-Main_2x.png",
     "soz": "Rolex",
-    "sozz": "Datejust"
+    "sozz": "Datejust",
+    "link":"saat2.html"
   },
   {
     "foto": "https://cdn2.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65/images/topmodels/1-w70x429knb132x17edf24c63-Main_2x.png",
     "soz": "Rolex",
-    "sozz": "Submariner"
+    "sozz": "Submariner",
+    "link":"saat2.html"
   },
   {
     "foto": "https://cdn2.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65/images/topmodels/2-y181jdh67kx2lripaucfting-Main_2x.png",
     "soz": "Rolex",
-    "sozz": "Daytona"
+    "sozz": "Daytona",
+    "link":"saat2.html"
   },
   {
     "foto": "https://cdn2.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65/images/topmodels/74-984eorvfjxmx240c0i4zlfhx-Main_2x.png",
     "soz": "Omega",
-    "sozz": "Speedmaster"
+    "sozz": "Speedmaster",
+    "link":"saat8.html"
   },
   {
     "foto": "https://cdn2.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65/images/topmodels/116-ie7ukr10yfqk1jhqf18dl7ky-Main_2x.png",
     "soz": "Audemars Piguet",
-    "sozz": "Royal Oak"
+    "sozz": "Royal Oak",
+    "link":"saat9.html"
   },
   {
     "foto": "https://cdn2.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65/images/topmodels/47-v5b06z1h6pcvqe8xu0e9h2pg-Main_2x.png",
     "soz": "Rolex",
-    "sozz": "Day-Date"
+    "sozz": "Day-Date",
+    "link":"saat2.html"
   },
   {
     "foto": "https://cdn2.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65/images/topmodels/4-s3n4vjwfzcimyvyeizqpl6cv-Main_2x.png",
     "soz": "Rolex",
-    "sozz": "GMT-Master II"
+    "sozz": "GMT-Master II",
+    "link":"saat2.html"
   },
   {
     "foto": "https://cdn2.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65/images/topmodels/106-8soyprb5zryt8moy5l06rmpu-Main_2x.png",
     "soz": "Patek Philippe",
-    "sozz": "Nautilus"
+    "sozz": "Nautilus",
+    "link":"saat4.html"
   }
 ]
