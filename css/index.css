@@ -1092,7 +1092,10 @@ img {
 .watch {
     position: relative;
 }
-
+.watch a{
+    text-decoration: none;
+    color: #000000;
+}
 .metnler {
     position: fixed;
     top: 0;
@@ -2844,4 +2847,28 @@ img {
 .banner_info h1 {
     width: 100%;
     max-width: 560px;
+}
+.header_search {
+    position: relative;
+}
+
+.axtaris_netice {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgb(212, 212, 212);
+    z-index: 999;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.axtaris_card {
+    padding: 12px 15px;
+    cursor: pointer;
+    color: black;
+}
+
+.axtaris_card:hover {
+    background-color: #EFECEA;
 }

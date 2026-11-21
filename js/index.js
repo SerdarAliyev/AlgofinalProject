@@ -65,12 +65,13 @@ fetch("../data/saatlar.json")
     .then((data) => {
         watclar.innerHTML = data.map((item) => `
     <div class="watch">
+      <a href="${item.link}">
         <img 
             src="${item.foto}" 
-            onclick="window.location.href='https://www.instagram.com/reels/DfAEqkpqiXb/'"
             style="cursor: pointer;"
         >
         <p>${item.soz}</p>
+        </a>
     </div>
 `).join("");
     })
@@ -163,21 +164,71 @@ window.addEventListener("resize", function () {
     bolmee.style.top = top;
     metnler.style.top = top;
 });
-const axtaris = document.querySelector(".header_search input");
 
+const axtaris = document.querySelector(".header_search input");
+const netice = document.querySelector(".axtaris_netice");
+
+let markaData = [];
+
+fetch("../data/markalar.json")
+    .then(response => response.json())
+    .then(data => {
+        markaData = data;
+    });
+
+axtaris.addEventListener("input", () => {
+
+    let soz = axtaris.value.toLowerCase().trim();
+
+    netice.innerHTML = "";
+
+    if (soz === "") return;
+
+    let tapilan = markaData.filter(marka =>
+        marka.name.toLowerCase().includes(soz)
+    );
+
+    tapilan.forEach(marka => {
+
+        netice.innerHTML += `
+            <div class="axtaris_card">
+                ${marka.name}
+            </div>
+        `;
+
+    });
+
+    document.querySelectorAll(".axtaris_card").forEach((card, index) => {
+
+        card.addEventListener("click", () => {
+            window.location.href = tapilan[index].link;
+        });
+
+    });
+
+});
+
+// Enter düyməsi ilə axtarış
 axtaris.addEventListener("keydown", (e) => {
 
     if (e.key === "Enter") {
 
         let soz = axtaris.value.toLowerCase().trim();
 
-        if (soz.includes("rolex")) {
-            window.location.href = `saat2.html?search=${encodeURIComponent(soz)}`;
+        if (soz === "") return;
+
+        let marka = markaData.find(item =>
+            item.name.toLowerCase().includes(soz)
+        );
+
+        if (marka) {
+            window.location.href = marka.link;
         }
 
     }
 
 });
+
 
 const counters = document.querySelectorAll(".counter");
 

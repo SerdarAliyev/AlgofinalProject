@@ -76,8 +76,13 @@ try {
         .then((data) => {
             watclar.innerHTML = data.map((item) => `
                 <div class="watch">
-                    <img src="${item.foto}">
-                    <p>${item.soz}</p>
+                       <a href="${item.link}">
+        <img 
+            src="${item.foto}" 
+            style="cursor: pointer;"
+        >
+        <p>${item.soz}</p>
+        </a>
                 </div>
             `).join("");
         });
@@ -173,16 +178,67 @@ window.addEventListener("resize", function () {
     bolmee.style.top = top;
     metnler.style.top = top;
 });
-const axtaris = document.querySelector(".header_search input");
 
+
+
+const axtaris = document.querySelector(".header_search input");
+const netice = document.querySelector(".axtaris_netice");
+
+let markaData = [];
+
+fetch("../data/markalar.json")
+    .then(response => response.json())
+    .then(data => {
+        markaData = data;
+    });
+
+axtaris.addEventListener("input", () => {
+
+    let soz = axtaris.value.toLowerCase().trim();
+
+    netice.innerHTML = "";
+
+    if (soz === "") return;
+
+    let tapilan = markaData.filter(marka =>
+        marka.name.toLowerCase().includes(soz)
+    );
+
+    tapilan.forEach(marka => {
+
+        netice.innerHTML += `
+            <div class="axtaris_card">
+                ${marka.name}
+            </div>
+        `;
+
+    });
+
+    document.querySelectorAll(".axtaris_card").forEach((card, index) => {
+
+        card.addEventListener("click", () => {
+            window.location.href = tapilan[index].link;
+        });
+
+    });
+
+});
+
+// Enter düyməsi ilə axtarış
 axtaris.addEventListener("keydown", (e) => {
 
     if (e.key === "Enter") {
 
         let soz = axtaris.value.toLowerCase().trim();
 
-        if (soz.includes("rolex")) {
-            window.location.href = `saat2.html?search=${encodeURIComponent(soz)}`;
+        if (soz === "") return;
+
+        let marka = markaData.find(item =>
+            item.name.toLowerCase().includes(soz)
+        );
+
+        if (marka) {
+            window.location.href = marka.link;
         }
 
     }
@@ -222,17 +278,27 @@ counters.forEach(counter => observer.observe(counter));
 
 
 
-const profilIcon = document.querySelector(".profil_icon");
-const user = document.querySelector(".user");
-
-profilIcon.addEventListener("click", () => {
-    user.classList.toggle("active");
-});
-
 const logout = document.querySelector("#logout");
 
 logout.addEventListener("click", () => {
     localStorage.removeItem("activeUser");
 
     window.location.href = "index.html";
+});
+
+
+const profil = document.querySelector(".profil_icon");
+const user = document.querySelector(".user");
+
+profil.addEventListener("click", (e) => {
+    e.stopPropagation();
+    user.classList.toggle("active");
+});
+
+user.addEventListener("click", (e) => {
+    e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+    user.classList.remove("active");
 });

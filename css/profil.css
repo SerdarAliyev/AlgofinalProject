@@ -1081,7 +1081,10 @@ img {
 .watch {
     position: relative;
 }
-
+.watch a{
+    text-decoration: none;
+    color: #000000;
+}
 .metnler {
     position: fixed;
     top: 0;
@@ -2902,4 +2905,36 @@ img {
 }
 .sozler a:hover{
     color: rgb(18, 65, 255);
+}
+.header_search {
+    position: relative;
+}
+
+.axtaris_netice {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 999;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.axtaris_card {
+    padding: 12px 15px;
+    cursor: pointer;
+    color: black;
+}
+
+.axtaris_card:hover {
+    background-color: #EFECEA;
+}
+
+.user {
+    display: none;
+}
+
+.user.aktiv {
+    display: block;
 }
