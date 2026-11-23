@@ -48,6 +48,12 @@ btn.addEventListener("click", (e) => {
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("activeUser", JSON.stringify(user));
 
-    window.location.href = "profil.html";
+    const yonlendir = localStorage.getItem("redirectAfterLogin");
 
+    if (yonlendir) {
+        localStorage.removeItem("redirectAfterLogin");
+        window.location.href = yonlendir;
+    } else {
+        window.location.href = "profil.html";
+    }
 });

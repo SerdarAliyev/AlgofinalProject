@@ -2,85 +2,98 @@
 let local_date = localStorage.getItem("card");
 let data = JSON.parse(local_date);
 
-let sekiller = [
-    data.product_img,
-    data.product_img2,
-    data.product_img3,
-    data.product_img4,
-    data.product_img5,
-    data.product_img6
-].filter(Boolean);
+if (!data) {
+    console.log("Saat məlumatı tapılmadı");
+} else {
 
-let index = 0;
+    let sekiller = [
+        data.product_img,
+        data.product_img2,
+        data.product_img3,
+        data.product_img4,
+        data.product_img5,
+        data.product_img6
+    ].filter(Boolean);
 
-let esasSekil = document.querySelector(".sekil > img");
-let kicikSekilDiv = document.querySelector(".sekill");
+    let index = 0;
 
-// Köhnə şəkilləri sil
-kicikSekilDiv.innerHTML = "";
+    let esasSekil = document.querySelector(".sekil > img");
+    let kicikSekilDiv = document.querySelector(".sekill");
 
-// Yeni saatın şəkillərini əlavə et
-sekiller.forEach((src, i) => {
-    let img = document.createElement("img");
+    kicikSekilDiv.innerHTML = "";
 
-    img.src = src;
-    img.alt = data.model || "Saat şəkli";
+    sekiller.forEach((src, i) => {
+        let img = document.createElement("img");
 
-    img.addEventListener("click", () => {
-        index = i;
+        img.src = src;
+        img.alt = data.model || "Saat şəkli";
+
+        img.addEventListener("click", () => {
+            index = i;
+            sekilDeyis();
+        });
+
+        kicikSekilDiv.appendChild(img);
+    });
+
+    function sekilDeyis() {
+        esasSekil.src = sekiller[index];
+
+        document.querySelectorAll(".sekill img").forEach((sekil, i) => {
+            sekil.style.border = i === index ? "2px solid #29ACFF" : "none";
+        });
+    }
+
+    if (sekiller.length > 0) {
+        sekilDeyis();
+    }
+
+    document.querySelector(".icon2 .fa-chevron-left").addEventListener("click", () => {
+        if (sekiller.length === 0) return;
+
+        index--;
+
+        if (index < 0) {
+            index = sekiller.length - 1;
+        }
+
         sekilDeyis();
     });
 
-    kicikSekilDiv.appendChild(img);
-});
+    document.querySelector(".icon2 .fa-chevron-right").addEventListener("click", () => {
+        if (sekiller.length === 0) return;
 
-function sekilDeyis() {
-    esasSekil.src = sekiller[index];
+        index++;
 
-    document.querySelectorAll(".sekill img").forEach((sekil, i) => {
-        sekil.style.border = i === index ? "2px solid #29ACFF" : "none";
+        if (index >= sekiller.length) {
+            index = 0;
+        }
+
+        sekilDeyis();
+    });
+
+    document.querySelector(".model").textContent = data.model || "";
+    document.querySelector(".seria").textContent = data.seria || "";
+    document.querySelector(".product-key").textContent = data.product_key || "";
+    document.querySelector(".product-key2").textContent = data.product_key_2 || "";
+    document.querySelector(".melumat").textContent = data.melumat || "";
+
+    // İNDİ AL DÜYMƏSİ
+
+    const indiAl = document.querySelector("#indiAl");
+
+    indiAl.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        localStorage.setItem("alis_saat", JSON.stringify(data));
+
+        const aktivUser = localStorage.getItem("activeUser");
+
+        if (aktivUser) {
+            window.location.href = "alis.html";
+        } else {
+            localStorage.setItem("redirectAfterLogin", "alis.html");
+            window.location.href = "login.html";
+        }
     });
 }
-
-// İlk şəkil
-if (sekiller.length > 0) {
-    sekilDeyis();
-}
-
-// Sol ox
-document.querySelector(".icon2 .fa-chevron-left").addEventListener("click", () => {
-    if (sekiller.length === 0) return;
-
-    index--;
-
-    if (index < 0) {
-        index = sekiller.length - 1;
-    }
-
-    sekilDeyis();
-});
-
-// Sağ ox
-document.querySelector(".icon2 .fa-chevron-right").addEventListener("click", () => {
-    if (sekiller.length === 0) return;
-
-    index++;
-
-    if (index >= sekiller.length) {
-        index = 0;
-    }
-
-    sekilDeyis();
-});
-
-// Məhsul məlumatları
-document.querySelector(".model").textContent = data.model || "";
-document.querySelector(".seria").textContent = data.seria || "";
-document.querySelector(".product-key").textContent = data.product_key || "";
-document.querySelector(".product-key2").textContent = data.product_key_2 || "";
-document.querySelector(".melumat").textContent = data.melumat || "";
-
-document.querySelector(".buy-btn").addEventListener("click", () => {
-    localStorage.setItem("alis_saat", JSON.stringify(data));
-    window.location.href = "alis.html";
-});

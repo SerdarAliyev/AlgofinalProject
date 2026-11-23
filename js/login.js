@@ -43,6 +43,6 @@ btn.addEventListener("click", (e) => {
 
     localStorage.setItem("activeUser", JSON.stringify(yoxla));
 
-    window.location.href = "profil.html";
+    window.location.href = "index.html";
 
 });
