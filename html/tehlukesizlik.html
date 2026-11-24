@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/tehlukesizlik.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html"><img src="https://s.c24.media/images/default/logos/chrono24-logo.svg"
+                            alt=""></a>
+                </div>
+                <div class="input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search through 695,756 watches worldwide">
+                </div>
+                <div class="login">
+
+                    <div id="qeydiyyat">
+                        <i class="far fa-user"></i>
+                        <h4>
+                            <a href="login.html">Log in</a>
+                            or
+                            <a href="register.html">Register</a>
+                        </h4>
+                    </div>
+
+                    <div id="profilHisse" style="display: none;">
+                        <i class="fa-solid fa-bell"></i>
+
+                        <img class="profil_icon"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCCxb5AeUN89cT4_xC1EmoIkGtT9d-2MxydNUaLRvv77ErFVTtMS3BQP4&s"
+                            alt="Profil">
+
+                        <div class="user">
+                            <div class="user1">
+                                <div class="userr">
+                                    <p>Profile</p>
+                                </div>
+
+                                <div class="userr">
+                                    <p>Wishlist</p>
+                                </div>
+
+                                <div class="userr" id="logout">
+                                    <p>Log out</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="secimler">
+                <div class="buy">
+                    <p>Buy a watch </p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="watch">
+                    <p>Sell a watch </p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="best">
+                    <p>Best Deals</p>
+                </div>
+                <div class="magazin">
+                    <p>Magazine</p>
+                </div>
+                <div class="collec">
+                    <p>Watch Collection</p>
+                </div>
+                <div class="pulse">
+                    <p>ChronoPulse</p>
+                </div>
+                <div class="faq">
+                    <p>FAQ</p>
+                </div>
+                <div class="securt">
+                    <p>Security </p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="banner">
+                <img src="https://img.chrono24.com/images/landing-page/2026/09/IBPLG-3840x1440-1-aspect-ratio-3840-1440.jpg"
+                    alt="">
+                <div class="sozler">
+                    <h1>Buy Watches With Buyer Protection</h1>
+                    <p>Pay securely via the Chrono24 Escrow Service, benefit from a 14-day statutory right of
+                        withdrawal, and rely on our Commitment to Authenticity.</p>
+                </div>
+            </div>
+            <div class="text">
+                <p>For more than 20 years, Chrono24 has helped watch enthusiasts buy and sell luxury watches worldwide.
+                    Buyer Protection safeguards purchases from Chrono24 dealers, while our Commitment to Authenticity
+                    requires professional dealers to verify every watch's authenticity before listing it. </p>
+            </div>
+            <div class="video">
+
+                <img
+                    src="https://img.chrono24.com/images/landing-page/2026/09/Image-II-for-LG-2624x1476-1-aspect-ratio-2624-1476.png">
+
+                <div class="start" onclick="videoAc()">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="videoPlayer" id="videoPlayer">
+                    <iframe id="youtubeVideo" src="" allow="autoplay; encrypted-media" allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+            <div class="fotom">
+                <h1>BUY WITH CONFIDENCE</h1>
+                <div class="sekil">
+                    <img src="https://img.chrono24.com/images/landing-page/2026/09/5050-Module-LG-1190x1190-3-aspect-ratio-1190-1190.jpg"
+                        alt="">
+                    <div class="sozlerrr">
+                        <h1>Secure Watch Payments With the Chrono24 Escrow Service</h1>
+                        <p>Buy a watch from a professional dealer or private seller with added peace of mind. The
+                            Chrono24 Escrow Service holds your payment securely in an escrow account until your watch
+                            arrives. After delivery, your payment is held for 14 days when buying from a professional
+                            dealer, or up to 7 days when buying from a private seller, giving you time to inspect your
+                            watch before the funds are released.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buyingg">
+                <div class="textler">
+                    <h1>14-Day Right of Withdrawal When Buying From Dealers</h1>
+                    <p>When you’re buying watches online, you want to see your watch in person before you commit. That’s
+                        why every new or pre-owned watch you buy from a dealer on Chrono24 comes with a 14-day right of
+                        withdrawal. Take your time: You have 14 days from delivery to decide if the watch is right for
+                        you. No reason needed: You can return your watch without explaining why. Purchases from private
+                        sellers aren’t covered by this right of withdrawal.</p>
+                </div>
+                <div class="imgg">
+                    <img src="https://img.chrono24.com/images/landing-page/2026/09/5050-Module-LG-1190x1190-1-aspect-ratio-1190-1190.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="cardlar">
+                <h1>Returns Made Easy</h1>
+                <div class="card">
+                    <div class="card1">
+                        <img src="https://s.c24.media/images/default/illustrations/number-one.svg" alt="">
+                        <p>Contact our support team: Send an email to our support team within 14 days of receiving the
+                            watch. They will confirm that your notice to return has been received on time and will
+                            initiate further steps.</p>
+                    </div>
+                    <div class="card1">
+                        <img src="https://s.c24.media/images/default/illustrations/number-two.svg" alt="">
+                        <p>Ship the watch back to the dealer - Send the watch back fully insured and in its original
+                            packaging. You will be responsible for the return shipping costs in most cases.</p>
+                    </div>
+                    <div class="card1">
+                        <img src="https://s.c24.media/images/default/illustrations/number-three.svg" alt="">
+                        <p>Receive a refund of the full purchase price - Finally, we will refund you the full purchase
+                            price and the initial shipping costs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sekill">
+                <img src="https://img.chrono24.com/images/landing-page/2026/09/5050-Module-LG-1190x1190-4-aspect-ratio-1190-1190.jpg"
+                    alt="">
+                <div class="sozlerr">
+                    <h1>Commitment to Authenticity</h1>
+                    <p>Our promise: Every new and used watch purchased from a professional dealer on Chrono24 is
+                        authentic. Our dealers are required to verify each watch’s authenticity and may only list
+                        original timepieces. If concerns about authenticity arise, you have 14 days from delivery to
+                        contact our support team and get your money back. This promise applies exclusively to purchases
+                        from professional dealers.</p>
+                    <button>See our Commitment to Authenticity</button>
+                </div>
+            </div>
+            <section class="important">
+                <div class="facts">
+
+                    <div class="fact">
+                        <h3 class="counter" data-target="20">0</h3>
+                        <p>years as the leading marketplace for luxury watches</p>
+                    </div>
+
+                    <div class="fact">
+                        <h3 class="counter" data-target="62000">0</h3>
+                        <p>Trusted sellers from over 150 countries</p>
+                    </div>
+
+                    <div class="fact">
+                        <h3 class="counter" data-target="200000">0</h3>
+                        <p>customers choose Buyer Protection annually</p>
+                    </div>
+
+                    <div class="fact">
+                        <h3 class="counter" data-target="9000000">0</h3>
+                        <p>website visitors monthly</p>
+                    </div>
+
+                    <div class="fact">
+                        <h3 class="counter" data-target="713000">0</h3>
+                        <p>listings covering a wide range of watches</p>
+                    </div>
+
+                    <div class="fact">
+                        <h3 class="counter" data-target="6550000">0</h3>
+                        <p>satisfied app users</p>
+                    </div>
+
+                </div>
+            </section>
+            <div class="contact">
+                <div class="sozlerr">
+                    <h1>Need help?</h1>
+                    <p>Our multilingual support team is always available to assist you. No matter what happens, you can
+                        count on us!</p>
+                    <button>Contact Chrono24</button>
+                </div>
+                <div class="imgg">
+                    <img src="https://img.chrono24.com/images/landing-page/2026/09/Image-7-1190-x-1190-px-aspect-ratio-1190-1190.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="profiller">
+                <h1>READ MORE</h1>
+
+                <div class="profil1">
+                    <img src="https://img.chrono24.com/images/magazine-article/2-1-Watch-Collection-scaled-9e3ba36f599078906beae38b3afe378abeb81706d1c5323c534e67587fa108ba-Rect960_480.jpg"
+                        alt="">
+                    <h3>Luxury Watches Made Easy: The Chrono24 Watch Collection for First-Time Buyers</h3>
+
+                    <div class="hesab1">
+                        <img src="https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65,w=144/2026/01/croppedcircle-image.com_-300x300.png"
+                            alt="">
+
+                        <div class="sozz">
+                            <h4>By Pascal Gehrlein</h4>
+                            <p>19 Mar 2024</p>
+                        </div>
+
+                        <div class="icon">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>6 minutes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profil1">
+                    <img src="https://img.chrono24.com/images/magazine-article/CAM-1186-Nachhaltigkeit-2-1-bf32422997458e21340a09bf06db1b4a31cd17d5886611e14f99ad1a47347b38-Rect960_480.jpg"
+                        alt="">
+                    <h3>Luxury Watches and Sustainability: Brands Setting a Good Example</h3>
+
+                    <div class="hesab1">
+                        <img src="https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65,w=144/2022/06/Tom-Mulraney-Profile-300x300.jpeg"
+                            alt="">
+
+                        <div class="sozz">
+                            <h4>By Tom Mulraney</h4>
+                            <p>19 May 2020</p>
+                        </div>
+
+                        <div class="icon">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>5 minutes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profil1">
+                    <img src="https://img.chrono24.com/images/magazine-article/buying-internationally-2-1-7528e56e9ca1ea7628838cecf7dbfe1f1d114cc8ab998d59bebab14cfa4884f9-Rect960_480.jpg"
+                        alt="">
+                    <p>Watch market</p>
+                    <h3>Chrono24 Guide: Buying Luxury Watches Internationally</h3>
+
+                    <div class="hesab1">
+                        <img src="https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65,w=144/2024/06/20191021-17-48-37-P2_04716-modified-2-300x300.png"
+                            alt="">
+
+                        <div class="sozz">
+                            <h4>By Annika Mur</h4>
+                            <p>2 Jan 2026</p>
+                        </div>
+
+                        <div class="icon">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>4 minutes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profil1">
+                    <img src="https://img.chrono24.com/images/magazine-article/Rolex-Daytona-87ca1eae3780370719367b8ec317a8ab12bc4501c365b235d7de0b981390a9e7-Rect960_480.jpg"
+                        alt="">
+                    <p>Rolex</p>
+                    <h3>Buying a Used Rolex Watch – What You Need to Know</h3>
+
+                    <div class="hesab1">
+                        <img src="https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,q=65,w=144/2018/11/Pic_RHE_Kreis.png"
+                            alt="">
+
+                        <div class="sozz">
+                            <h4>By Rene Herold</h4>
+                            <p>4 Nov 2026</p>
+                        </div>
+
+                        <div class="icon">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>5 minutes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Service">
+                <h1>Do you have any questions?</h1>
+                <a href="">Contact</a>
+                <div class="accordion">
+                    <div class="accordion">
+
+                        <div class="accordion-item">
+                            <div class="click">
+                                <h4>What is the Chrono24 Escrow Service?</h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="click-content">
+                                <p>The Chrono24 Escrow Service offers both buyers and sellers more security when
+                                    purchasing a watch. After the buyer has transferred the total amount to the escrow
+                                    account, the money will be kept safe until the buyer has received the item and
+                                    confirmed delivery.
+
+                                    We usually trigger payout to the seller within 7 business days of the delivery
+                                    confirmation. The payment can also be released earlier if the buyer agrees.
+
+                                    Furthermore, using the Escrow Service allows us to offer you more support throughout
+                                    the transaction process should something not go according to plan.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="click">
+                                <h4>How can I pay for an order using an escrow service?</h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="click-content">
+                                <p>Many listings offer payment processing on Chrono24. In these cases, you transfer
+                                    payment to a secure escrow account, where it is kept safe until you have the watch
+                                    in your hands. The Chrono24 team is always available to help ensure your purchase
+                                    runs smoothly. You can learn more about Chrono24 payment processing here:
+
+                                    Buying from a commercial dealer.
+                                    Buying from a private seller.
+
+                                    If you're unable to process your payment using Chrono24's escrow account, please
+                                    note the following:
+
+                                    You can likely find other trustworthy escrow services in your own country. Make sure
+                                    to research the escrow service thoroughly before making a final choice.
+
+                                    Both buyer and seller must agree to the use of an escrow service. Please only accept
+                                    information the escrow service provides directly to you. Do not rely on emails
+                                    forwarded by the seller.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="click">
+                                <h4>How much does it cost to make a purchase via the Escrow Service?</h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="click-content">
+                                <p>We charge a fee of 2.5% of the total price including shipping costs for use of the
+                                    Escrow Service.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="click">
+                                <h4>Can I return an order?</h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="click-content">
+                                <p>You have no legal right to a return when buying from a private seller. Each seller
+                                    decides for themselves whether he or she accepts returns or not. If you want to
+                                    return an item, please speak directly with the seller. Return details should be
+                                    clarified in full before shipping any item back to the seller.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="click">
+                                <h4>What is the return policy?</h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="click-content">
+                                <p>You should look into the dealer's return policy before making a purchase. Some
+                                    dealers only accept returns on watches with their seals and packaging intact. It is
+                                    in your best interest to fully insure the return shipment and to comply with the
+                                    return deadline. We recommend reaching out to the dealer to discuss the process
+                                    before returning the item.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="click">
+                                <h4>What happens in case of a return?</h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="click-content">
+                                <p>If you've been charged a commission fee for a sale that resulted in a return, you
+                                    will be credited the full amount of the fee. If the return is not yet visible in
+                                    your Market Portal, please contact our support team.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="click">
+                                <h4>What is the return policy?</h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="click-content">
+                                <p>When you place an order with Buyer Protection, you always have 14 days to return the
+                                    item. If you pay the purchase price directly to the dealer, please look into their
+                                    return policy beforehand.
+
+                                    When making purchases with private sellers, you do not necessarily have the right to
+                                    return your watch. However, you can still submit complaints to Chrono24 within 7
+                                    seven days of receiving your watch.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="click">
+                                <h4>What is the Authenticity Guarantee?</h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="click-content">
+                                <p>Dealers are not allowed to list replicas or fakes on Chrono24 under any
+                                    circumstances. The dealer is required to investigate the watch's authenticity before
+                                    selling it and to list all known modifications in as much detail as possible in the
+                                    item description. You can find additional details in our Authenticity Guarantee
+                                    Terms & Conditions.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="click">
+                                <h4>How do I place an ad for a watch?</h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="click-content">
+                                <p>Create a listing for your watch in just a few simple steps using our Listing
+                                    Assistant:
+
+                                    Enter your watch's reference number in the search bar. Our Listing Assistant will
+                                    recognize the watch and fill out certain details automatically.
+                                    Describe your watch in detail. The more detailed the description, the easier it is
+                                    for potential buyers to find your listing.
+                                    Add up to 10 images of the watch taken from different angles. Keep your camera
+                                    handy; you'll be asked to take 2 additional photos of the watch set to specific
+                                    times and upload them as proof of ownership. These photos are displayed in your
+                                    listing.
+                                    Register as a private seller by providing a copy of your valid photo ID.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button>More questions and answers</button>
+                </div>
+            </div>
+            <div class="esas">
+                <div class="watchh">
+                    <h1>Why Buying a Watch on Chrono24 Is Secure?</h1>
+                    <p>Chrono24 Buyer Protection is a package of security features that make buying a watch on
+                        Chrono24 safe and convenient. It doesn't matter whether you purchase your dream watch from
+                        one of the many vetted dealers or from a private seller.
+                        At the core of Chrono24 Buyer Protection is the Chrono24 Escrow Service, which ensures
+                        risk-free payment processing. Depending on whether you buy from a dealer or private seller,
+                        additional benefits may apply, such as a 14-day statutory right of withdrawal, insured
+                        shipping, and an Authenticity Guarantee.</p>
+                </div>
+                <div class="watchh">
+                    <h1>How Payment via the Chrono24 Escrow Service Works?</h1>
+                    <p>Once you've found your dream watch on Chrono24 and placed a binding order, you'll receive a
+                        payment request. It asks you to transfer the amount due promptly to a Chrono24 escrow account.
+                        Once the payment has been received, the seller is notified and asked to arrange shipping.
+                        Once the watch arrives, you have time to check whether it matches the seller's description. If
+                        you bought the watch from a dealer, you have 14 days to inspect it. For purchases from a private
+                        seller, the period is 7 days. If everything meets your expectations, you can give Chrono24
+                        approval to release payment to the seller.
+                        If the watch doesn't match the seller's description, inform Chrono24 within the inspection
+                        period, and you'll be refunded the purchase price.</p>
+                </div>
+                <div class="watchh">
+                    <h1>Are watches insured during shipping?</h1>
+                    <p>When you buy a watch from a dealer on Chrono24, the shipment is always insured for its full
+                        value, regardless of whether the dealer is based domestically or abroad.
+                        If you buy from a private seller, you need to arrange the shipping details directly with the
+                        seller. Chrono24 strongly recommends insisting on sufficiently insured shipping with tracking.
+                        This lets you check the shipment status at any time and gives you better information in case the
+                        watch is lost or damaged in transit.</p>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer1">
+                    <div class="secim">
+                        <h3>Chrono24 Newsletter</h3>
+                        <button>Subscribe now for free </button>
+                    </div>
+                    <div class="secim2">
+                        <h3>Settings</h3>
+                        <div class="secimlerr">
+                            <img src="https://s.c24.media/images/default/flags/us.svg" alt="">
+                            <p>.COM
+                                |
+                                English
+                                |
+                                USD</p>
+                        </div>
+                    </div>
+                    <div class="secim3">
+                        <h3>Theme</h3>
+                        <p>System</p>
+                    </div>
+                </div>
+                <div class="footer2">
+                    <div class="ull1">
+                        <h3>Buy on Chrono24</h3>
+                        <li><a href="">Chrono24 Buyer Protection</a></li>
+                        <li><a href="">Payment via the Escrow Service</a></li>
+                        <li><a href="">Commitment to Authenticity</a></li>
+                        <li><a href="">Easy Returns</a></li>
+                    </div>
+                    <div class="ull2">
+                        <h3>Sell on Chrono24</h3>
+                        <li><a href="">Selling Watches as a Private Seller</a></li>
+                        <li><a href="">Selling Watches Commercially</a></li>
+                        <li><a href="">Free Appraisal</a></li>
+                        <li><a href="">Advice for private sellers</a></li>
+                    </div>
+                    <div class="ull3">
+                        <h3>About Chrono24</h3>
+                        <ul>
+                            <li><a href="">About us</a></li>
+                            <li><a href="">Jobs</a></li>
+                            <li><a href="">Press</a></li>
+                            <li><a href="">Legal Details</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer3">
+                    <div class="ull4">
+                        <h3>Personalized support</h3>
+                        <li><a href="">Frequently Asked Questions</a></li>
+                        <li><a href="">Contact</a></li>
+                    </div>
+                    <div class="sekiller">
+                        <h3>Chrono24 Apps</h3>
+                        <div class="foto">
+                            <div class="foto1">
+                                <img src="https://s.c24.media/images/default/footer-app-qr-code.svg" alt="">
+                            </div>
+                            <div class="foto2">
+                                <img src="https://s.c24.media/images/default/app-store-badges/apple-app-store_en.svg"
+                                    alt="">
+                                <img src="https://s.c24.media/images/default/app-store-badges/play_en.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paymentt">
+                        <h3>Payment Methods</h3>
+                        <div class="pay">
+                            <img src="https://s.c24.media/images/default/payment-icons/visa.svg" alt="">
+                            <img src="https://s.c24.media/images/default/payment-icons/mastercard.svg" alt="">
+                            <img src="https://s.c24.media/images/default/payment-icons/american-express.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="xet"></div>
+                <div class="secimlerim">
+                    <div class="liler">
+                        <ul>
+                            <li><a href="">Data Privacy Policy</a></li>
+                            <li><a href="">Declaration on Accessibility</a></li>
+                            <li><a href="">Manage Cookies</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                            <li><a href="">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div class="iconlar">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-flickr"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/profill.js"></script>
+    <script src="../js/tehlukesizlik.js"></script>
+</body>
+
+</html>
