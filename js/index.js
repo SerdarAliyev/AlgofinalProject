@@ -201,6 +201,7 @@ axtaris.addEventListener("input", () => {
     document.querySelectorAll(".axtaris_card").forEach((card, index) => {
 
         card.addEventListener("click", () => {
+            axtaris.value = "";
             window.location.href = tapilan[index].link;
         });
 
@@ -222,6 +223,7 @@ axtaris.addEventListener("keydown", (e) => {
         );
 
         if (marka) {
+            axtaris.value = "";
             window.location.href = marka.link;
         }
 
@@ -261,3 +263,7 @@ const observer = new IntersectionObserver((entries) => {
 counters.forEach(counter => observer.observe(counter));
 
 
+window.addEventListener("pageshow", () => {
+    axtaris.value = "";
+    netice.innerHTML = "";
+});
